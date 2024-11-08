@@ -12,12 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="/styles/fonts.css">
 
 	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=32c9a090-be04-486a-8d74-4abec94918da&load=package.full&lang=ru-RU" type="text/javascript"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=32c9a090-be04-486a-8d74-4abec94918da&load=package.full&lang=ru-RU"
+		type="text/javascript"></script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<header class="header">
+	<header class="header">
+		<div class="wrapper">
 			<div class="nav_container-logo text-white">
 				<a href="/pages/contacts.html"><img class="logo_navigation" src="/img/pages/contacts/logo.svg" /></a>
 				<div class="nav_container-logo__dropdown">
@@ -115,8 +116,10 @@
 				<a class="nav_container-button__container-phone" href="tel:+7 (495) 260-99-34">+7 (495) 260-99-34</a>
 				<a class="nav_container-button__container-reservation" href="#BukzaContainer15639">Забронировать</a>
 			</div>
-		</header>
-		<header class="header-fixed hide">
+		</div>
+	</header>
+	<header class="header-fixed hide">
+		<div class="wrapper">
 			<div class="heeader-fixed-container">
 				<div class="nav_container-logo text-white">
 					<a href="/pages/contacts.html"><img class="logo_navigation" src="/img/pages/contacts/logo.svg" /></a>
@@ -134,12 +137,15 @@
 				<div class="nav_container-button__container">
 					<a class="nav_container-button__container-phone" href="tel:+7 (495) 260-99-34">+7 (495) 260-99-34</a>
 					<a class="nav_container-button__container-reservation" href="#BukzaContainer15639">Забронировать</a>
-					<button class="nav_container-button__wrapper__burger-menu"><a href="#" ><div class="nav_container-button__burger-menu"></div></a></button>
+					<button class="nav_container-button__wrapper__burger-menu"><a href="#">
+							<div class="nav_container-button__burger-menu"></div>
+						</a></button>
 				</div>
 			</div>
-			
-		</header>
-		<main class="main">
+		</div>
+	</header>
+	<main class="main">
+		<div class="wrapper">
 			<div class="main-left">
 				<div class="main-left__container-title">
 					<em class="main-left__title ">узнайте больше</em>
@@ -173,8 +179,10 @@
 					</div>
 				</div>
 			</div>
-		</main>
-		<footer class="footer">
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="wrapper">
 			<div class="footer-links-container">
 				<div class="footer-info-container">
 					<a href="#"><img class="footer-info-container__logo" src="/img/pages/contacts/logo.svg" /></a>
@@ -241,25 +249,22 @@
 					<a href="#" class="footer-button-container-locations__button-btn">Проложить маршрут</a>
 				</div>
 			</div>
+		</div>
 
-
-		</footer>
-	</div>
+	</footer>
 	<script>
 
-		ymaps.ready(init);
-
+		ymaps.ready(init)
 		function init() {
-				var myMap = new ymaps.Map("map", {
-						center: [55.76, 37.64], // Координаты центра карты
-						zoom: 10
-				});
+			var myMap = new ymaps.Map("map", {
+				center: [55.76, 37.64], // Координаты центра карты
+				zoom: 10
+			})
 		}
-	
-</script>
-<script src="../scripts/headerFixed.js">
 
-</script>
+	</script>
+	<script src="../scripts/headerFixed.js">
+	</script>
 </body>
 
 </html>

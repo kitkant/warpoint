@@ -1,7 +1,9 @@
 .footer{
 	padding-top: 200px;
 	padding-bottom: 60px;
-
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 .footer-links-container{
 	display: flex;

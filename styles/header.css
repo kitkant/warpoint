@@ -1,4 +1,9 @@
-.header {
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.header .wrapper{
 	display: flex;
 	justify-content: space-between;
 	padding-top: 15px;
@@ -233,7 +238,6 @@
 
 }
 .heeader-fixed-container{
-	max-width: 1150px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;

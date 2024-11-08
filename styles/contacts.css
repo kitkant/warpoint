@@ -1,7 +1,13 @@
-.main {
-	padding-top: 100px;
+.main{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.main .wrapper{
+	padding-top: 50px;
 	display: flex;
 	justify-content: space-between;
+	gap: 50px;
 }
 .main-left {
 	display: flex;
@@ -45,7 +51,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	transform:  skew(360deg, 0) rotate(-8deg);
+	transform:  skew(360deg, 0) rotate(-8deg) translateX(-15px) translateY(-20px);
 }
 .main-right__img-vector{
 	width: 450px;
