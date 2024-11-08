@@ -1,0 +1,76 @@
+.footer{
+	padding-top: 200px;
+	padding-bottom: 60px;
+
+}
+.footer-links-container{
+	display: flex;
+	gap: 40px;
+}
+.footer-info-container{
+	max-width: 250px;
+	color: #e8e9eb;
+	font-family: 'Gilroy-Regular';
+	font-weight: 400;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.footer-info-container__logo{
+	width: 156px;
+	height: 21px;
+}
+.footer-info-container__data{
+	display: flex;
+	flex-direction: column;
+}
+.footer-nav-container{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	color: #e8e9eb;
+}
+.footer-nav-container__navigation{
+	display: flex;
+	flex-direction: column;
+	gap:2px;
+}
+.footer-nav-container__navigation-item{
+position: relative;
+
+}
+.footer-nav-container__navigation-item a{
+	line-height: 1.6;
+	font-family: 'Gilroy-Regular';
+	font-size: 14px;
+	transition: all 0.3s ease;
+}
+.footer-nav-container__navigation-item a:hover{
+	color: #3970f6;
+
+
+}
+.footer-nav-container__navigation-item span{
+	line-height: 36px;
+	font-family: 'Gilroy-Bold';
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;  
+	word-spacing: -5px;
+}
+.footer-nav-container__navigation-item:first-child{
+	padding-bottom: 18px;
+}
+
+.footer-button-wrapper{
+	padding-top: 100px;
+}
+.footer-button-container-store__button{
+	display: flex;
+	gap: 10px;
+}
+.footer-button-container-store__button-appstore a img{
+	width: 122px;
+	height: 32px;
+}

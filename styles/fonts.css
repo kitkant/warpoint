@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Gilroy-Regular";
+  src:
+    local("Gilroy"),
+    url("/fonts/Gilroy-Regular.woff2") format("woff2") ,
+    url("/fonts/Gilroy-Regular.woff") format("woff"),
+    url("/fonts/gilroy-regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src:
+    local("Gilroy"),
+    url("/fonts/Gilroy-Bold.woff2") format("woff2") ,
+    url("/fonts/Gilroy-Bold.woff") format("woff"),
+    url("/fonts/gilroy-bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Gilroy-BoldItalic";
+  src:
+    local("Gilroy"),
+    url("/fonts/gilroy-bolditalic.ttf") format("ttf");
+}
