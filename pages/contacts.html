@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/styles/footer.css">
 	<link rel="stylesheet" type="text/css" href="/styles/global.css">
 	<link rel="stylesheet" type="text/css" href="/styles/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/styles/modalBurger.css">
 
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=32c9a090-be04-486a-8d74-4abec94918da&load=package.full&lang=ru-RU"
@@ -137,9 +138,9 @@
 				<div class="nav_container-button__container">
 					<a class="nav_container-button__container-phone" href="tel:+7 (495) 260-99-34">+7 (495) 260-99-34</a>
 					<a class="nav_container-button__container-reservation" href="#BukzaContainer15639">Забронировать</a>
-					<button class="nav_container-button__wrapper__burger-menu"><a href="#">
-							<div class="nav_container-button__burger-menu"></div>
-						</a></button>
+					<button class="nav_container-button__wrapper__burger-menu">
+						<div class="nav_container-button__burger-menu"></div>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -151,7 +152,6 @@
 					<em class="main-left__title ">узнайте больше</em>
 				</div>
 				<div id="map" class="main-left__ymaps">
-
 				</div>
 			</div>
 			<div class="main-right">
@@ -252,6 +252,102 @@
 		</div>
 
 	</footer>
+	<div class="modalBackground">
+	</div>
+	<div class="sidebar sidebar--isHidden ">
+		<div class="sidebar__container">
+			<ul class="sidebar__container__navigation">
+				<a href="#"><img class="sidebar-menu__logo" src="/img/pages/contacts/logo.svg" /></a>
+				<li class="sidebar__container__navigation-items">
+					<a href="https://yandex.ru/maps/org/warpoint/70585369119/?from=mapframe&ll=37.688293%2C55.724051&z=14" class="sidebar_container__navigation-item__link">Тарифы</a>
+				</li>
+				<li class="sidebar__container__navigation-items">
+					<a href="#" class="sidebar_container__navigation-item__link">Наши игры</a>
+				</li>
+				<li class="sidebar_container__navigation-item sidebar_container-navigation__dropdown">
+					<div class="sidebar_container-navigation__container">
+						<a href="#" class="sidebar_container__navigation-item__link">Мероприятия</a>
+						<div class="sidebar_container-navigation__triangle"></div>
+					</div>
+					<div class="sidebar_container-navigation__down-list">
+						<div class="sidebar_container-navigation__triangle-border"></div>
+						<ul class="sidebar_container__down-container__navigation">
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Детский день рождения</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Взрослый день рождения</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Корпоратив</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Школьный выпускной</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Турниры</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="sidebar__container__navigation-items">
+					<a href="#">Сертификаты</a>
+				</li>
+				<li class="sidebar_container__navigation-item sidebar_container-navigation__dropdown">
+					<div class="sidebar_container-navigation__container">
+						<a href="#" class="sidebar_container__navigation-item__link">Информация</a>
+						<div class="sidebar_container-navigation__triangle"></div>
+					</div>
+					<div class="sidebar_container-navigation__down-list">
+						<div class="sidebar_container-navigation__triangle-border"></div>
+						<ul class="sidebar_container__down-container__navigation">
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Клубная карта</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Наши акции</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Новости</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Полезные статьи</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Франшиза</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Витрина</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">Аренда</a>
+							</li>
+							<li class="sidebar_container__down-container__navigation-item">
+								<a href="#" class="sidebar_container__down-container__navigation-item__link">О компании</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="sidebar__container__navigation-items">
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+			<div class="sidebar__container__contacts">
+				<a class="sidebar__container__contacts-phone" href="tel:+7 (495) 260-99-34">+7 (495) 260-99-34</a>
+				<div class="sidebar__container__contacts__adress-container">
+					<span>Москва</span>
+					<span>Волгоградский пр-кт 32к8</span>
+				</div>
+				<div class="sidebar__container__contacts__sotial_media-container">
+					<a href="#"><img src="/img/socials/vk-black.svg" /></a>
+					<a href="#"><img src="/img/socials/youtube-black.svg" /></a>
+					<a href="#"><img src="/img/socials/tik-tok-black.svg" /></a>
+				</div>
+				<a class="sidebar__container__contacts-reservation" href="#BukzaContainer15639">Забронировать</a>
+			</div>
+		</div>
+			<div class="sidebar__btn-wrapper"><button class="sidebar__close_btn"></button></div>
+	</div>
 	<script>
 
 		ymaps.ready(init)
@@ -264,6 +360,10 @@
 
 	</script>
 	<script src="../scripts/headerFixed.js">
+
+	</script>
+	<script src="../scripts/modalBurger.js">
+
 	</script>
 </body>
 
