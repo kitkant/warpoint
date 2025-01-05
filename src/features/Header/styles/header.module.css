@@ -1,0 +1,300 @@
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+}
+.header .wrapper{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 15px;
+}
+
+
+.nav_containerLogo{
+	padding-top: 5px;
+}
+.logo_navigation {
+	max-width: 120px;
+}
+
+.nav_containerLogo__dropdown{
+	position: relative;
+	display: inline-block;
+	max-width: 120px;
+	width: 100%;
+}
+.nav_containerLogo__triangle,
+.nav_containerNavigation__triangleBorder {
+	position: absolute;
+	left: calc(50% - 10px);
+	top: -10px;
+	z-index: 2;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #262626;
+}
+
+.nav_containerLogo__downList {
+	display: none;
+	position: absolute;
+	color: white;
+	min-width: 180px;
+	z-index: 1;
+	border-top: 20px solid transparent;
+}
+
+.nav_containerLogo__container,
+.nav_containerNavigation__container {
+	display: flex;
+	align-items: center;
+	
+}
+.nav_containerLogo__dropdown:hover .nav_containerLogo__triangleTextCity {
+	transform: rotate(180deg);
+	transition: all 1s ease;
+}
+
+.nav_containerNavigation__dropdown:hover .nav_containerNavigation__triangle{
+	transition: transform 1s ease;
+	transform: rotate(180deg);
+ }
+ .nav_containerNavigation__container{
+	margin-top: 3px;
+ }
+.nav_containerNavigation__container:hover .nav_containerNavigation__triangle{
+	transition: border 0.3s ease;
+	border-top-color: #3970f6;
+	transition: transform 1s ease;
+ }
+.nav_containerLogo__triangleTextCity,
+.nav_containerNavigation__triangle {
+	padding-top: 2px;
+	margin-left: 5px;
+	z-index: 2;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	transition: transform 1s ease;
+
+	border-top: 4px solid white;
+}
+.nav_containerLogo__downList a{
+	color: white;
+	padding: 18px 20px 12px 18px;
+	text-decoration: none;
+	display: block;
+	background-color: #262626;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+}
+.nav_container__downContainer__navigationItem a {
+	color: white;
+	padding: 0 20px 12px 18px;
+	text-decoration: none;
+	display: block;
+	background-color: #262626;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+}
+.nav_container__downContainer__navigationItem:first-child  a{
+	padding-top: 18px;
+}
+.nav_container__downContainer__navigationItem:last-child a{
+	padding-bottom: 18px;
+}
+.nav_containerLogo__downList a:hover {
+	background-color: #262626;
+}
+
+.nav_containerLogo__dropdown:hover .nav_containerLogo__downList {
+	display: block;
+}
+ .nav_containerLogo__textCity {
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	font-size: 12px;
+}
+
+
+ .nav_containerNavigation__dropdown {
+	position: relative;
+	display: inline-block;
+	max-width: 90px;
+	width: 100%;
+}
+.nav_container__navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav_container__navigationItem {
+	margin: 0 15px 0 15px;
+}
+.nav_containerNavigation__dropdown:hover .nav_containerNavigation__downList {
+	display: block;
+}
+.nav_container__navigationItem__link {
+	height: 24px;
+}
+.nav_container__navigationItem__link a{
+	height: 24px;
+}
+.nav_container__navigationContainer{
+	max-width: 760px;
+	width: 100%;
+	align-items: center;
+  display: flex;
+    justify-content: center;
+}
+.nav_containerNavigation__downList {
+	display: none;
+	position: absolute;
+	color: white;
+	min-width: 150px;
+	left: calc(-50% + 20px);
+	z-index: 1;
+	border-top: 20px solid transparent;
+}
+.nav_container__navigationItem__link{
+	font-size: 13px;
+	
+}
+.nav_container__downContainer__navigationItem__link{
+	font-size: 14px;
+	color: #c4c4c4;
+
+  font-family: 'Gilroy-Regular';
+	line-height: 1.35;
+}
+.nav_container__downContainer__navigationItem__link, .nav_container__navigationItem__link{
+	color: #c4c4c4;
+	transition: all 0.3s ease;
+	line-height: 1.55;
+    font-weight: 500;
+}
+.nav_container__navigationItem__link:hover, .nav_container__downContainer__navigationItem__link:hover{
+		color: #3970f6;
+}
+.nav_containerNavigation__container:hover .nav_container__downContainer__navigationItem__link{
+	
+	color: #3970f6;
+}
+.nav_containerNavigation__container:hover .nav_container__navigationItem__link{
+	
+	color: #3970f6;
+}
+
+
+.nav_containerButton__container{
+	display: flex;
+	gap: 10px;
+}
+.nav_containerButton__containerPhone{
+	line-height: 1.55;
+    font-weight: 500;
+		background-color: #333333;
+		transition: all 0.3s ease;
+		width: 180px;
+		height: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		font-size: 14px;
+}
+
+.nav_containerButton__containerPhone:hover{
+
+		background-color: #2551c2;
+}
+.nav_containerButton__containerReservation{
+	background-color: #3970f6;
+	line-height: 1.55;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	width: 170px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 13px;
+}
+.nav_containerButton__containerReservation:hover{
+	background-color: #2551c2;
+}
+
+.headerFixed{
+	display: flex;
+	justify-content: center;
+	position: sticky;
+  top: 0;
+	width: 100%;
+	z-index: 4;
+	transition: all 0.3s ease;
+	padding: 10px 0 10px 5px;
+	background-color: #1B1B1B;
+
+}
+.heeaderFixedContainer{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.nav_containerButton__wrapper__burgerMenu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	background-color: #333333;
+	position: relative;
+	z-index: 0;
+}
+
+.nav_containerButton__wrapper__burgerMenu a{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav_containerButton__burgerMenu{
+	height: 4px;
+	width: 30px;
+	position: relative;
+	z-index: 1;
+	background-color: #949494;
+}
+
+
+.nav_containerButton__burgerMenu::before{
+	content: '';
+	height: 4px;
+	width: 30px;
+	background-color: #949494;
+	position: absolute;
+	top: -10px;
+	left: 0;
+	z-index: 2;
+}
+.nav_containerButton__burgerMenu::after{
+	height: 4px;
+	width: 30px;
+	content: '';
+	background-color: #949494;
+	position: absolute;
+	bottom: -10px;
+	z-index: 2;
+	left: 0;
+}
+.hide{
+
+	transform: translateY(-120px);
+}
