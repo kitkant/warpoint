@@ -3,6 +3,7 @@ import Header from '@/features/Header/Header'
 import styled from '@emotion/styled'
 import localFont from 'next/font/local'
 import './globals.css'
+import Footer from '@/features/Footer/Footer'
 
 const gilroy = localFont({ src: [
   {
@@ -32,6 +33,7 @@ export default function RootLayout({
 			<Body className={gilroy.className}>
 				<Header />
 				{children}
+        <Footer/>
 			</Body>
 		</html>
 	)
