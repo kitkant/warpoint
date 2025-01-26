@@ -1,20 +1,22 @@
 'use client'
-import Header from '@/features/Header/Header'
 import styled from '@emotion/styled'
 import localFont from 'next/font/local'
 import './globals.css'
+import HeaderLayout from './layouts/HeaderLayout'
 // import Footer from '@/features/Footer/Footer'
 
-const gilroy = localFont({ src: [
-  {
-    path: '../app/fonts/Gilroy-Regular.woff2',
-    weight: '400'
-  },
-  {
-    path: '../app/fonts/Gilroy-Bold.woff2',
-    weight: '700'
-  }
-] })
+const gilroy = localFont({
+	src: [
+		{
+			path: '../app/fonts/Gilroy-Regular.woff2',
+			weight: '400',
+		},
+		{
+			path: '../app/fonts/Gilroy-Bold.woff2',
+			weight: '700',
+		},
+	],
+})
 
 export default function RootLayout({
 	children,
@@ -31,9 +33,9 @@ export default function RootLayout({
 				</title>
 			</head>
 			<Body className={gilroy.className}>
-				<Header />
+				<HeaderLayout />
 				{children}
-        {/* <Footer/> */}
+				{/* <Footer/> */}
 			</Body>
 		</html>
 	)
