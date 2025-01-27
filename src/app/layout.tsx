@@ -29,7 +29,7 @@ export default function RootLayout({
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
 				<title>
-					Контакты VR-арены WARPOINT в Москве м. Волгоградский пр-кт
+					WARPOINT
 				</title>
 			</head>
 			<Body className={gilroy.className}>
