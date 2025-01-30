@@ -9,7 +9,7 @@
 .header .wrapper,.headerFixed .wrapper {
 	display: flex;
 	justify-content: space-between;
-	max-width: 1180px;
+	max-width: 1420px;
 	width: 100%;
 	padding: 15px 10px 0 10px;
 }
@@ -304,6 +304,11 @@
 .nav_containerButton__container__mobile {
 	display: none;
 }
+@media(max-width: 1440px){
+	.header .wrapper,.headerFixed .wrapper {
+		max-width: 1180px;
+	}
+}
 
 @media(max-width: 1200px){
 	.nav_container__navigationContainer{
@@ -320,3 +325,4 @@
 		display: none;
 	}
 }
+
