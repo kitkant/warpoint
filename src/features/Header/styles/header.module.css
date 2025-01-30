@@ -234,12 +234,10 @@
 	justify-content: center;
 	position: sticky;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	z-index: 4;
 	transition: all 0.3s ease;
-	
 	background-color: #1b1b1b;
-	max-width: 1180px;
 
 }
 .headerFixedContainer {
