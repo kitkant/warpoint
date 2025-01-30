@@ -238,6 +238,7 @@
 	z-index: 4;
 	transition: all 0.3s ease;
 	background-color: #1b1b1b;
+	padding-bottom: 15px;
 
 }
 .headerFixedContainer {
