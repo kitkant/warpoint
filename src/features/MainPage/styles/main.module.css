@@ -5,7 +5,11 @@
 	padding-top: 60px;
 }
 
-.titleWrapper{
+
+/* // Hero */
+
+
+.titleWrapperHero{
 	display: flex;
 	flex-direction: column;
 	align-items: end;
@@ -13,36 +17,36 @@
 	position: relative;
 	z-index: 1;
 }
-
-.title{
+.titleHero{
 	text-transform: uppercase;
 	color: #fbfbfb;
 	font-size: 84px;
 	font-weight: 800;
 	transform: scale(0.7,1.1) skew(-20deg,0);
-	
 }
-.titleItemRedBox{
+.titleItemRedBoxHero{
 	background-color: #E23239;
 	padding: 10px 50px;
 }
 
-.title:nth-child(1){
+.titleHero:nth-child(1){
+	margin-right: -170px;
+}
+.titleHero:nth-child(2){
+	margin-right: 70px;
+}
+.titleHero:nth-child(3){
 	margin-right: -100px;
 }
-.title:nth-child(2){
-	margin-right: 50px;
-}
-.title:nth-child(3){
-	margin-right: -100px;
-}
-.title:nth-child(4){
+.titleHero:nth-child(4){
 	margin-right: -30px;
 }
-.container{
+.containerHeroContent{
 	max-width: 1440px;
 	position: relative;
-
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 }
 .wrapper{
 	width: 100%;
@@ -55,9 +59,69 @@
 	width: 100%;
 	max-width: 1440px;
 }
-.imageContainerHero{
+.imageWrapperHero{
 	position: absolute;
 	z-index: 1;
 	top: 28px;
+	left: -120px;
+}
+.teamImage{
+	position: absolute;
+	top: -280px;
 	left: 0;
+	z-index: 2;
+}
+.gradientBlack{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 760px;
+	background: linear-gradient( rgba(27,27,27,0.1) 0%, rgba(27,27,27,0.3) 70%, rgba(27,27,27,1) 96%);
+}
+.gradientBlackGround{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 760px;
+	background: linear-gradient( rgba(27,27,27,0.7) 0%, rgba(27,27,27,0.7) 70%, rgba(27,27,27,1) 100%);
+}
+
+.pinContainerHero{
+	display: flex;
+	flex-direction: column;
+	max-width: 530px;
+	width: 100%;
+	padding-top: 60px;
+	gap: 60px;
+}
+.pinTitleHero{
+	max-width: 433px;
+	color: #bdbdbd;
+	font-size: 20px;
+	line-height: 1.6;
+	font-weight: 400;
+	opacity: 0.6;
+}
+.pinBtnContainer{
+	display: flex;
+	justify-content: space-between;
+	max-width: 490px;
+}
+.pinBtnContainer:last-child{
+	align-items: end;
+}
+.pinAddressContainerHero{
+	display: flex;
+	gap: 20px;
+}
+.addressHero{
+	color: #787878;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+	max-width: 200px;
 }

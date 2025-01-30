@@ -1,5 +1,5 @@
-'use-client'
-import React, { useState } from 'react';
+'use client'
+import React from 'react';
 import styled from '@emotion/styled'
 
 
@@ -23,7 +23,7 @@ const Btn = styled.button`
 	justify-content: center;
 	align-items: center;
 	color: white;
-	font-size: 14px;
+	font-size: 16px;
 	border: none;
 	cursor:pointer;
 	&:hover{
