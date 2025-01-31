@@ -303,7 +303,7 @@
 .nav_containerButton__container__mobile {
 	display: none;
 }
-@media(max-width: 1440px){
+@media(max-width: 1710px){
 	.header .wrapper,.headerFixed .wrapper {
 		max-width: 1180px;
 	}
