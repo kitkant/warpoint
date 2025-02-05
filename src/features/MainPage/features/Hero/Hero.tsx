@@ -1,4 +1,4 @@
-
+'use client'
 import Button from '@/app/UI/Button/Button'
 import Image from 'next/image'
 import styles from '../../styles/main.module.css'
