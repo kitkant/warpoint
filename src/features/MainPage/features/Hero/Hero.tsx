@@ -1,18 +1,23 @@
-'use client'
 
 import Button from '@/app/UI/Button/Button'
 import Image from 'next/image'
 import styles from '../../styles/main.module.css'
+import useMediaQuery from '@/app/hooks/useMediaQuery'
+
 
 const Hero = () => {
+
+	const desktop1710 = useMediaQuery(1711)
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.heroContainer}>
 				<div className={styles.imageWrapperHero}>
 					<div className={styles.imageContainerHero}>
 						<Image
+							className={styles.groundImage}
 							src={'/img/pages/main/ground.png'}
-							width={820}
+							width={900}
 							height={600}
 							alt='ground'
 						/>
@@ -20,7 +25,7 @@ const Hero = () => {
 							className={styles.teamImage}
 							src={'/img/pages/main/team.png'}
 							width={790}
-							height={1200}
+							height={1150}
 							alt='ground'
 						/>
 						<div className={styles.gradientBlackGround}></div>
@@ -37,7 +42,7 @@ const Hero = () => {
 						</div>
 						<div className={styles.titleHero}>
 							<em className={styles.titleItemRedBoxHero}>
-								на арене виртуальной{' '}
+								на арене виртуальной
 							</em>
 						</div>
 						<div className={styles.titleHero}>
@@ -53,8 +58,8 @@ const Hero = () => {
 							<Button
 								title={'Забронировать'}
 								primary={true}
-								width={205}
-								height={60}
+								width={desktop1710 ? 170 : 205 }
+								height={desktop1710 ? 50 :60}
 								onClick={() => console.log('click')}
 							/>
 							<div className={styles.pinAddressContainerHero}>

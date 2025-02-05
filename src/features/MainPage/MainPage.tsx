@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Hero from './features/Hero/Hero'
 import styles from './styles/main.module.css'

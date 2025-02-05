@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 import MainPage from '@/features/MainPage/MainPage'
 
 
