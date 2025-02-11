@@ -318,6 +318,9 @@
 		display: flex;
 		gap: 10px;
 	}
+	.header .wrapper,.headerFixed .wrapper {
+		max-width: 940px;
+	}
 }
 @media(max-width: 640px){
 	.removeBtnOnMobile{
