@@ -1,107 +1,112 @@
-.wrapper{
+.wrapper {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding-top: 50px;
+	overflow: hidden;
 }
-
 
 /* // Hero */
 
-
-.titleWrapperHero{
+.titleWrapperHero {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
 	max-width: 1440px;
 	position: relative;
-	
-
 }
-.titleHero{
+.titleHero {
 	text-transform: uppercase;
 	color: #fbfbfb;
 	font-size: 84px;
 	font-weight: 800;
-	transform: scale(0.7,1.1) skew(-20deg,0);
+	transform: scale(0.7, 1.1) skew(-20deg, 0);
 }
-.titleItemRedBoxHero{
-	background-color: #E23239;
+.titleItemRedBoxHero {
+	background-color: #e23239;
 	padding: 10px 40px;
 }
 
-.titleHero:nth-child(1){
+.titleHero:nth-child(1) {
 	margin-right: -170px;
 }
-.titleHero:nth-child(2){
+.titleHero:nth-child(2) {
 	margin-right: 70px;
 }
-.titleHero:nth-child(3){
+.titleHero:nth-child(3) {
 	margin-right: -100px;
 }
-.titleHero:nth-child(4){
+.titleHero:nth-child(4) {
 	margin-right: -30px;
 }
-.containerHeroContent{
+.containerHeroContent {
 	max-width: 1440px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: end;
 }
-.wrapper{
+.wrapper {
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
-.imageContainerHero{
+.imageContainerHero {
 	height: 1150px;
 	width: 900px;
-
 }
-.heroContainer{
+.heroContainer {
 	position: relative;
 	z-index: 0;
 	width: 100%;
 	max-width: 1440px;
 }
-.imageWrapperHero{
+.imageWrapperHero {
 	position: absolute;
 	top: 28px;
 	left: -120px;
 }
-.groundImage{
+.groundImage {
 	position: absolute;
 	left: -50px;
 	z-index: 1;
 	top: -50px;
 }
-.teamImage{
+.teamImage {
 	position: absolute;
 	top: -280px;
 	left: -20px;
 	z-index: 2;
 }
-.gradientBlack{
+.gradientBlack {
 	position: absolute;
 	z-index: 2;
 	top: -40px;
 	left: -50px;
 	width: 100%;
 	height: 760px;
-	background: linear-gradient( rgba(27,27,27,0.01) 0%, rgba(27,27,27,0.1) 70%, rgba(27,27,27,0.7) 80%, rgba(27,27,27,1) 96%);
+	background: linear-gradient(
+		rgba(27, 27, 27, 0.01) 0%,
+		rgba(27, 27, 27, 0.1) 70%,
+		rgba(27, 27, 27, 0.7) 80%,
+		rgba(27, 27, 27, 1) 96%
+	);
 }
-.gradientBlackGround{
+.gradientBlackGround {
 	position: absolute;
 	z-index: 1;
 	top: -70px;
 	left: -50px;
 	width: 100%;
 	height: 760px;
-	background: linear-gradient( rgba(27,27,27,0.7) 0%, rgba(27,27,27,0.7) 70%, rgba(27,27,27,1) 100%);
+	background: linear-gradient(
+		rgba(27, 27, 27, 0.7) 0%,
+		rgba(27, 27, 27, 0.7) 70%,
+		rgba(27, 27, 27, 1) 100%
+	);
 }
 
-.pinContainerHero{
+.pinContainerHero {
 	display: flex;
 	flex-direction: column;
 	max-width: 530px;
@@ -111,7 +116,7 @@
 	position: relative;
 	z-index: 5;
 }
-.pinTitleHero{
+.pinTitleHero {
 	max-width: 433px;
 	color: #bdbdbd;
 	font-size: 20px;
@@ -119,96 +124,134 @@
 	font-weight: 400;
 	opacity: 0.6;
 }
-.pinBtnContainer{
+.pinBtnContainer {
 	display: flex;
 	gap: 50px;
 	max-width: 490px;
 }
-.pinBtnContainer:last-child{
+.pinBtnContainer:last-child {
 	align-items: end;
 }
-.pinAddressContainerHero{
+.pinAddressContainerHero {
 	display: flex;
 	gap: 20px;
 }
-.addressHero{
+.addressHero {
 	color: #787878;
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 400;
 	max-width: 200px;
 }
-.titleHero:nth-child(1), .titleHero:nth-child(2){
+.titleHero:nth-child(1),
+.titleHero:nth-child(2) {
 	position: relative;
 	z-index: 1;
 }
-.titleHero:nth-child(3), .titleHero:nth-child(4){
+.titleHero:nth-child(3),
+.titleHero:nth-child(4) {
 	position: relative;
 	z-index: 3;
 }
 
-@media(max-width: 1710px){
-	.heroContainer{
+@media (max-width: 1710px) {
+	.heroContainer {
 		max-width: 1200px;
 	}
-	.teamImage{
+	.teamImage {
 		top: -260px;
 		left: -60px;
 		z-index: 2;
 	}
-	.groundImage{
+	.groundImage {
 		position: absolute;
 		left: -50px;
 		z-index: 1;
 		top: -30px;
 	}
-	.gradientBlackGround{
-
+	.gradientBlackGround {
 		top: -50px;
-	
+	}
+	.gradientBlack {
+		top: -20px;
+	}
+
+	.titleHero:nth-child(1) {
+		margin-right: -180px;
+		line-height: 1.3;
+	}
+	.titleHero:nth-child(2) {
+		margin-right: -20px;
+		line-height: 1.3;
+	}
+	.titleHero:nth-child(3) {
+		margin-right: -160px;
+		line-height: 1.3;
+	}
+	.titleHero:nth-child(4) {
+		margin-right: -90px;
+		line-height: 1.3;
+	}
+	.pinContainerHero {
+		max-width: 460px;
+	}
+	.addressHero {
+		max-width: 180px;
+	}
+	.pinContainerHero {
+		right: -60px;
+	}
+	.pinBtnContainer {
+		gap: 30px;
+	}
+	.pinBtnContainer:last-child {
+		align-items: start;
+	}
+	.pinAddressContainerHero {
+		align-items: start;
+	}
+	.pinAddressContainerHero img {
+		margin-top: 10px;
+	}
+}
+@media (max-width: 1440px) {
+	.pinTitleHero{
+		font-size: 18px;
+	}
+	.teamImage{
+		left: -10px;
+		
+	}
+	.groundImage{
+		left: 0;
+	}
+}
+@media (max-width: 1280px) {
+	.titleHero{
+		font-size: 80px;
+	}
+	.pinTitleHero{
+		font-size: 18px;
+	}
+	.teamImage{
+		left: 50px;
+		top: -230px;
+	}
+	.groundImage{
+		left: 50px;
+	}
+	.gradientBlackGround{
+		top: -150px;
 	}
 	.gradientBlack{
-
-		top: -20px;
-	
+		top: -120px;
 	}
-	
-.titleHero:nth-child(1){
-	margin-right: -180px;
-	line-height: 1.3;
-}
-.titleHero:nth-child(2){
-	margin-right: -20px;
-	line-height: 1.3;
-}
-.titleHero:nth-child(3){
-	margin-right: -160px;
-	line-height: 1.3;
-}
-.titleHero:nth-child(4){
-	margin-right: -90px;
-	line-height: 1.3;
-}
-.pinContainerHero{
-	max-width: 460px;
-}
-.addressHero{
-	max-width: 180px;
-}
-.pinContainerHero{
-	right: -60px;
-}
-.pinBtnContainer{
-	gap: 30px;
-}
-.pinBtnContainer:last-child{
-	align-items: start;
-
-}
-.pinAddressContainerHero{
-	align-items: start;
-}
-.pinAddressContainerHero img{
-	margin-top: 10px;
-}
+	.pinContainerHero{
+		padding-top: 50px;
+		gap: 40px;
+		right: -45px;
+	}
+		.titleHero{
+			left: -20px;
+		}
 }
