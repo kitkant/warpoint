@@ -9,6 +9,8 @@ const Hero = () => {
 
 	const desktop1710 = useMediaQuery(1711)
 	const desktop1280 = useMediaQuery(1280 + 21)
+	const laptop1200 = useMediaQuery(1202)
+	const laptop1024 = useMediaQuery(1024)
 
 	return (
 		<div className={styles.wrapper}>
@@ -18,15 +20,15 @@ const Hero = () => {
 						<Image
 							className={styles.groundImage}
 							src={'/img/pages/main/ground.png'}
-							width={desktop1280 ? 800  :900}
-							height={desktop1280 ? 520  :600}
+							width={laptop1200 ? 750 : desktop1280 ? 800  :900}
+							height={laptop1200 ? 500 : desktop1280 ? 520  :600}
 							alt='ground'
 						/>
 						<Image
 							className={styles.teamImage}
 							src={'/img/pages/main/team.png'}
-							width={desktop1280 ? 700 :790}
-							height={desktop1280 ? 1000 : 1150}
+							width={laptop1200 ? 600 : desktop1280 ? 700 :790}
+							height={laptop1200 ? 900 : desktop1280 ? 1000 : 1150}
 							alt='ground'
 						/>
 						<div className={styles.gradientBlackGround}></div>

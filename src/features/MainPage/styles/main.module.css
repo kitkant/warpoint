@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	padding-top: 50px;
-	overflow: hidden;
+
 }
 
 /* // Hero */
@@ -198,9 +198,9 @@
 	.addressHero {
 		max-width: 180px;
 	}
-	.pinContainerHero {
+	/* .pinContainerHero {
 		right: -60px;
-	}
+	} */
 	.pinBtnContainer {
 		gap: 30px;
 	}
@@ -215,43 +215,78 @@
 	}
 }
 @media (max-width: 1440px) {
-	.pinTitleHero{
+	.pinTitleHero {
 		font-size: 18px;
 	}
-	.teamImage{
+	.teamImage {
 		left: -10px;
-		
 	}
-	.groundImage{
+	.groundImage {
 		left: 0;
 	}
 }
 @media (max-width: 1280px) {
-	.titleHero{
+	.titleHero {
 		font-size: 80px;
 	}
-	.pinTitleHero{
+	.pinTitleHero {
 		font-size: 18px;
 	}
-	.teamImage{
+	.teamImage {
 		left: 50px;
 		top: -230px;
 	}
-	.groundImage{
+	.groundImage {
 		left: 50px;
 	}
-	.gradientBlackGround{
+	.gradientBlackGround {
 		top: -150px;
 	}
-	.gradientBlack{
+	.gradientBlack {
 		top: -120px;
 	}
-	.pinContainerHero{
+	.pinContainerHero {
 		padding-top: 50px;
 		gap: 40px;
 		right: -45px;
 	}
-		.titleHero{
-			left: -20px;
-		}
+	.titleHero {
+		left: -20px;
+	}
+}
+@media (max-width: 1200px) {
+	.titleHero {
+		font-size: 64px;
+	}
+	.heroContainer {
+		max-width: 940px;
+	}
+	.titleHero:first-child {
+		margin-right: -156px;
+	}
+	.titleHero:nth-child(2) {
+		margin-right: -85px;
+	}
+	.titleHero:nth-child(3){
+		margin-right: -160px;
+	}
+	.titleHero:nth-child(4){
+		margin-right: 0;
+	}
+	.groundImage{
+		left: -20px;
+	}
+	.teamImage{
+		left: -10px;
+		top: -210px;
+	}
+	.pinBtnContainer{
+		gap: 20px;
+	}
+	.pinAddressContainerHero img{
+		opacity: 0.7;
+	}
+	.gradientBlack{
+		top: -180px;
+	}
 }
