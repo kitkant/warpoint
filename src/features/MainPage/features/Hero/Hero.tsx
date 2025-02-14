@@ -64,6 +64,7 @@ const Hero = () => {
 								width={desktop1710 ? 170 : 205 }
 								height={desktop1710 ? 50 :60}
 								onClick={() => console.log('click')}
+								header={false}
 							/>
 							<div className={styles.pinAddressContainerHero}>
 								<Image src={'/img/pages/main/pin.svg'} width={30} height={30} alt='pin'/>

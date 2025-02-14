@@ -312,7 +312,7 @@ const Header = () => {
 						height={45}
 						title={'Забронировать'}
 						onClick={() => alert('hi')}
-
+						header={true}
 					/>
 					</span>
 					

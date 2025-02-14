@@ -3,10 +3,10 @@ import React from 'react';
 import styled from '@emotion/styled'
 
 
-const Button = ({title, primary, width, height, onClick}) => {
+const Button = ({title, primary, width, height, onClick, header}) => {
 
 	return (
-		<Btn primary={primary} width={width} height={height} onClick={onClick}>
+		<Btn primary={primary} width={width} height={height} onClick={onClick} header={header}>
 			{title}
 		</Btn>
 	);
@@ -23,7 +23,7 @@ const Btn = styled.button`
 	justify-content: center;
 	align-items: center;
 	color: white;
-	font-size: 16px;
+	font-size: ${props => props.header ? '13px' : '16px'};
 	border: none;
 	cursor:pointer;
 	&:hover{
