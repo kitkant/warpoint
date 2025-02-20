@@ -44,6 +44,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	align-items: end;
 }
 .wrapper {
@@ -248,7 +249,7 @@
 	.pinContainerHero {
 		padding-top: 50px;
 		gap: 40px;
-		right: -45px;
+		right: -30px;
 	}
 	.titleHero {
 		left: -20px;
@@ -289,4 +290,36 @@
 	.gradientBlack{
 		top: -180px;
 	}
+}
+@media (max-width: 1024px) {
+
+	.groundImage{
+		left: 40px;
+	}
+	.teamImage{
+		left: 50px;
+		top: -190px;
+	}
+	.pinBtnContainer{
+		gap: 20px;
+	}
+	.pinAddressContainerHero img{
+		opacity: 0.7;
+	}
+	.gradientBlack{
+		top: -90px;
+		height: 600px;
+	}
+	.gradientBlackGround {
+		top: -150px;
+		height: 600px;
+	}
+}
+@media (max-width: 960px) {
+
+	.containerHeroContent > div:first-of-type{
+		align-items: center;
+		overflow: hidden;
+	}
+
 }
