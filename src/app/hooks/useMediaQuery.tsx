@@ -73,25 +73,45 @@
 import { useEffect, useState } from "react";
 
 
-
-const useMediaQuery = (minWidth : number) => {
-  const [state, setState] = useState({
-    windowWidth: 0,
-    isDesiredWidth: false,
-  });
+const useMediaQuery = (breakpoint: number) => {
+  const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    const resizeHandler = () => {
-      const currentWindowWidth = window.innerWidth;
-      const isDesiredWidth = currentWindowWidth < minWidth;
-      setState({ windowWidth: currentWindowWidth, isDesiredWidth });
-    };
-    resizeHandler()
-    window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, [state.windowWidth]);
+    const mediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`);
 
-  return state.isDesiredWidth;
+    const handleChange = () => {
+      setMatches(mediaQuery.matches);
+    };
+
+    handleChange(); // сразу обновляем значение при монтировании компонента
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, [breakpoint]); // зависимость только от breakpoint
+
+  return matches;
 };
+// const useMediaQuery = (minWidth : number) => {
+//   const [state, setState] = useState({
+//     windowWidth: 0,
+//     isDesiredWidth: false,
+//   });
+
+//   useEffect(() => {
+//     const resizeHandler = () => {
+//       const currentWindowWidth = window.innerWidth;
+//       const isDesiredWidth = currentWindowWidth < minWidth;
+//       setState({ windowWidth: currentWindowWidth, isDesiredWidth });
+//     };
+//     resizeHandler()
+//     window.addEventListener("resize", resizeHandler);
+//     return () => window.removeEventListener("resize", resizeHandler);
+//   }, [state.windowWidth]);
+
+//   return state.isDesiredWidth;
+// };
 
 export default useMediaQuery;
