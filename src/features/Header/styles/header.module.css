@@ -327,4 +327,15 @@
 		display: none;
 	}
 }
+/* убрать */
 
+@media (max-width: 400px) {
+	.headerFixed .wrapper{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.header .wrapper{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
