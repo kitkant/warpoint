@@ -2,7 +2,6 @@ import useMediaQuery from '@/app/hooks/useMediaQuery'
 import Button from '@/app/UI/Button/Button'
 import Image from 'next/image'
 import styles from '../../styles/hero.module.css'
-import mainStyles from '../../styles/main.module.css'
 
 const Hero = () => {
 	const desktop1710 = useMediaQuery(1711)
@@ -17,7 +16,7 @@ const Hero = () => {
 
 
 	return (
-		<div className={mainStyles.wrapper}>
+		<div className={styles.wrapper}>
 			<div className={styles.heroContainer}>
 				<div className={styles.imageWrapperHero}>
 					<div className={styles.imageContainerHero}>

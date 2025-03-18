@@ -1,5 +1,13 @@
 
 /* // Hero */
+.wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-top: 50px;
+}
 
 .titleWrapperHero {
 	display: flex;
