@@ -275,7 +275,7 @@
 		margin-right: -85px;
 	}
 	.titleHero:nth-child(3) {
-		margin-right: -160px;
+		margin-right: -150px;
 	}
 	.titleHero:nth-child(4) {
 		margin-right: 0;
@@ -318,6 +318,12 @@
 	.gradientBlackGround {
 		top: -150px;
 		height: 600px;
+	}
+	.titleHero:first-child{
+		margin-right: -145px;
+	}
+	.titleHero:nth-child(3) {
+		margin-right: -140px;
 	}
 }
 @media (max-width: 960px) {
