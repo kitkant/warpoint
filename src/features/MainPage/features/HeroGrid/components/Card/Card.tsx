@@ -1,14 +1,14 @@
 import Image from 'next/image'
-import styles from './card.module.css'
 import imgStyles from '../../../../styles/heroGrid.module.css'
+import styles from './card.module.css'
 
-interface IProps{
+interface IProps {
 	img: string
 	title: string
 	text: React.ReactNode
 	height: boolean
 }
-const Card = ({img, title, text, height} : IProps) => {
+const Card = ({ img, title, text, height }: IProps) => {
 	return (
 		<div className={styles.wrapper}>
 			<Image
@@ -16,7 +16,11 @@ const Card = ({img, title, text, height} : IProps) => {
 				width={0}
 				height={0}
 				sizes='100vw'
-				style={{ width: '100%',  display: 'block', height: height ? '100%' : 'auto' }}
+				style={{
+					width: '100%',
+					display: 'block',
+					height: height ? '100%' : 'auto',
+				}}
 				alt='8'
 				className={imgStyles.imgCard}
 			/>
@@ -36,9 +40,7 @@ const Card = ({img, title, text, height} : IProps) => {
 			<div className={styles.backgroundBlack}></div>
 			<div className={styles.overlay}>
 				<div className={styles.textContainer}>
-					<p>
-						{text}
-					</p>
+					<p>{text}</p>
 				</div>
 			</div>
 		</div>
