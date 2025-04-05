@@ -8,8 +8,7 @@ const HeroGrid = () => {
 	const laptop960 = useMediaQuery(960)
 	const laptop640 = useMediaQuery(641)
 	const mobile480 = useMediaQuery(480)
-	const mobile450 = useMediaQuery(450)
-	const mobile380 = useMediaQuery(380)
+
 
 	return (
 		<div className={styles.wrapper}>
