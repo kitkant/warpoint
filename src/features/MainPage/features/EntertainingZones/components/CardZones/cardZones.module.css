@@ -1,0 +1,235 @@
+.wrapper {
+
+	height: 100%;
+	position: relative;
+	z-index: 0;
+	background-color: #262626;
+}
+.imgContainer {
+	height: 100%;
+	max-height: 317px;
+	position: relative;
+	z-index: 0;
+}
+
+.imgContainer {
+	position: relative;
+	width: 100%;
+	height: 317px; /* можно поставить любую высоту */
+	overflow: hidden;
+}
+.image {
+	object-fit: cover;
+	object-position: top;
+}
+.descriptionWrapper {
+	padding: 40px;
+	height: 100%;
+	color: #fbfbfb;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 30px;
+	max-height: 365px;
+}
+.title {
+	text-transform: uppercase;
+	font-size: 28px;
+	transform: scale(0.9, 1.3);
+	margin-left: -10px;
+}
+.subTitle {
+	color: #bdbdbd;
+	opacity: 0.6;
+	letter-spacing: 0.1;
+	font-size: 14px;
+}
+.text {
+	line-height: 1.6;
+	font-size: 20px;
+	max-width: 450px;
+	opacity: 0.9;
+}
+.titleWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.moreBtn {
+	background-color: transparent;
+	border: none;
+	color: #bdbdbd;
+	opacity: 0.7;
+	font-size: 16px;
+	letter-spacing: 0.4;
+	cursor: pointer;
+}
+.moreBtn:hover{
+	opacity: 0.9;
+}
+.btnWrapper {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+.reservationBtn {
+	width: 175px;
+	height: 51px;
+}
+.btnWrapper p {
+	font-size: 24px;
+	transform: scale(0.9, 1.3);
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.playBtn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: transparent;
+	border-radius: 50%;
+	border: none;
+	transform: translate(-50%, -50%);
+	max-height: 80px;
+	max-width: 80px;
+	animation: pulse 2s infinite;
+}
+.playBtn img {
+	border-radius: 50%;
+
+	transition: all 0.5s ease;
+}
+.playBtn:hover img {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.blueline{
+	position: absolute;
+	left: -70px;
+	top: -30px;
+	z-index: -1;
+}
+.redline{
+	position: absolute;
+	right: -70px;
+	top: -30px;
+	z-index: -1;
+}
+
+
+@media(max-width: 1200px){
+	.imgContainer{
+		max-height: 285px;
+	}
+	.descriptionWrapper{
+		max-height: 320px;
+	}
+	.title{
+		font-size: 26px;
+	}
+	.text{
+		font-size: 16px;
+    max-width: 365px;
+	}
+	.btnWrapper p{
+		font-size: 20px;
+	}
+}
+
+@media(max-width: 960px){
+
+	
+	.imgContainer{
+		max-height: 285px;
+	}
+	.descriptionWrapper{
+		max-height: 320px;
+	}
+	.title{
+		font-size: 26px;
+	}
+	.text{
+		font-size: 16px;
+    max-width: 450px;
+	}
+	.btnWrapper p{
+		font-size: 20px;
+	}
+	.imgContainer{
+		max-height: 279px;
+	}
+	.descriptionWrapper{
+		max-height: 272px;
+		gap: 15px;
+	}
+	.redline{
+		top: -10px;
+	}
+}
+
+@media(max-width: 640px){
+	.blueline{
+		top: -10px;
+		left: -50px;
+	}
+	.redline{
+		top: -10px;
+		right: -50px;
+	}
+	.imgContainer{
+		max-height: 249px;
+	}
+	.descriptionWrapper{
+		max-height: 260px;
+	}
+	.title{
+		font-size: 20px;
+	}
+	.subTitle{
+		font-size: 12px;
+	}
+	.text{
+		font-size: 14px;
+		max-width: 350px;
+	}
+	.moreBtn{
+		font-size: 14px;
+	}
+	.btnWrapper p{
+		font-size: 18px;
+	}
+	.descriptionWrapper{
+		justify-content: space-between;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(224, 53, 63, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 30px rgba(224, 53, 63, 0);
+	}
+	100% {
+	}
+}

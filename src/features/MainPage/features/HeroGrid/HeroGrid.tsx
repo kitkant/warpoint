@@ -34,7 +34,7 @@ const HeroGrid = () => {
 								display: 'block',
 								height: '100%',
 							}}
-							alt='bluline'
+							alt='blueline'
 							width={0}
 							height={0}
 						/>
