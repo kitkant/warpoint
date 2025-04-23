@@ -1,7 +1,7 @@
+import useMediaQuery from '@/app/hooks/useMediaQuery'
 import Button from '@/app/UI/Button/Button'
 import Image from 'next/image'
 import styles from './cardZones.module.css'
-import useMediaQuery from '@/app/hooks/useMediaQuery'
 
 interface IProps {
 	title: string
@@ -13,13 +13,13 @@ interface IProps {
 }
 // title, subTitle, text, img, position
 const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
-
 	const laptop1200 = useMediaQuery(1202)
-	const laptop960 = useMediaQuery(960)
 	const laptop640 = useMediaQuery(641)
-	const mobile480 = useMediaQuery(480)
 
 	return (
+		<div className={styles.container}>
+
+		
 		<div className={styles.wrapper}>
 			<div className={styles.imgContainer}>
 				<Image
@@ -36,8 +36,8 @@ const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
 				<button className={styles.playBtn}>
 					<Image
 						alt='play'
-						width={laptop640 ? 66 :80}
-						height={laptop640 ? 66 :80}
+						width={laptop640 ? 66 : 80}
+						height={laptop640 ? 66 : 80}
 						src={'/img/pages/main/EntertainingZones/play-button.svg'}
 					/>
 				</button>
@@ -76,7 +76,7 @@ const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
 					className={styles.blueline}
 					src={'/img/pages/main/EntertainingZones/blueline.svg'}
 					width={laptop1200 ? 280 : 330}
-					height={laptop1200 ? 230 :270}
+					height={laptop1200 ? 230 : 270}
 					alt='blueline'
 				/>
 			) : (
@@ -88,6 +88,16 @@ const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
 					alt='redline'
 				/>
 			)}
+			
+		</div>
+		<Button
+				title={btn}
+				primary={true}
+				width={position === 'left' ? 175 : 256}
+				height={75}
+				onClick={() => console.log('click')}
+				header={false}
+			/>
 		</div>
 	)
 }

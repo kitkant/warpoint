@@ -117,5 +117,22 @@
 	}
 	.container{
 		max-width: 428px;
+		display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+	}
+	.cardWrapper{
+		/* grid-auto-rows: clamp(0px, 167.7vw, 805px); */
+		grid-auto-rows: clamp(0px, 183.5vw, 881px);
+		gap: 50px;
+	}
+}
+@media(max-width: 380px){
+	.title{
+		font-size: 34px;
+		margin-left: -80px;
+	}
+	.subTitle{
+		font-size:  18px;
 	}
 }
