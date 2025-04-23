@@ -275,6 +275,9 @@
 	.firstItem {
 		margin-left: -40px;
 	}
+	.titleItem{
+		font-size: 34px;
+	}
 	.titleWrapper:first-child > p:nth-child(2) {
 		margin-left: -5px;
 	}
