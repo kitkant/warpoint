@@ -4,6 +4,7 @@ import Hero from './features/Hero/Hero'
 import styles from './styles/main.module.css'
 import HeroGrid from './features/HeroGrid/HeroGrid'
 import EntertainingZones from './features/EntertainingZones/EntertainingZones'
+import MoreForGame from './features/MoreForGame/MoreForGame'
 
 const MainPage = () => {
 	return (
@@ -11,6 +12,7 @@ const MainPage = () => {
 			<Hero/>
 			<HeroGrid/>
 			<EntertainingZones/>
+			<MoreForGame/>
 		</main>
 	);
 };

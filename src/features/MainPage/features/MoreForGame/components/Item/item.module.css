@@ -1,0 +1,22 @@
+.text{
+	white-space: pre-line;
+	line-height: 1.6;
+}
+.wrapper{
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	color: #BDBDBD;
+	font-size: 16px;
+}
+
+@media(max-width: 960px){
+	.text{
+		white-space: normal;
+	}
+}
+@media(max-width: 640px){
+	.text{
+		font-size: 14px;
+	}
+}
