@@ -20,3 +20,18 @@
 		font-size: 14px;
 	}
 }
+@media(max-width: 480px){
+	.wrapper{
+		flex-direction: column;
+		align-items: start;
+		gap: clamp(10px, 4.1vw, 20px);
+	}
+	.text{
+		font-size: 18px;
+		white-space: pre-line;
+	}
+	.wrapper img{
+		width: clamp(0px, 11.4vw, 55px);
+		height: clamp(0px, 11.4vw, 55px);
+	}
+}
