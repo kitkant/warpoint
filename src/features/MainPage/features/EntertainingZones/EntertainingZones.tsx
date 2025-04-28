@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import styles from '../../styles/entertainingZones.module.css'
 import CardZones from './components/CardZones/CardZones'
 import cardData from './data/cardData'
-// title,subTitle,text,img,position,btn
+
 const EntertainingZones = () => {
 	return (
 		<div className={styles.wrapper}>

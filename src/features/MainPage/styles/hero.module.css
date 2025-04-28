@@ -1,4 +1,3 @@
-
 /* // Hero */
 .wrapper {
 	width: 100%;
@@ -228,7 +227,7 @@
 	.groundImage {
 		left: 0px;
 	}
-	.gradientBlackGround{
+	.gradientBlackGround {
 		left: 0;
 	}
 }
@@ -319,7 +318,7 @@
 		top: -150px;
 		height: 600px;
 	}
-	.titleHero:first-child{
+	.titleHero:first-child {
 		margin-right: -145px;
 	}
 	.titleHero:nth-child(3) {
@@ -511,7 +510,7 @@
 	.imageContainerHero {
 		width: auto;
 	}
-	.addressHero{
+	.addressHero {
 		font-size: 14px;
 		max-width: 180px;
 	}
@@ -540,7 +539,6 @@
 	.groundImage {
 		left: 180px;
 	}
-	
 }
 @media (max-width: 480px) {
 	.groundImage {
@@ -551,81 +549,79 @@
 		top: 115px;
 		left: 270px;
 	}
-	.imageContainerHero{
+	.imageContainerHero {
 		width: 100%;
 		overflow: hidden;
 	}
-	.heroContainer{
+	.heroContainer {
 		overflow: hidden;
 	}
-	.pinContainerHero{
+	.pinContainerHero {
 		padding-top: 500px;
 		right: 0;
 		width: 100%;
 	}
-	.gradientBlackGround{
+	.gradientBlackGround {
 		left: 280px;
 		top: 55px;
 		width: 480px;
 		height: 490px;
 	}
-	.gradientBlack{
+	.gradientBlack {
 		width: 480px;
 		height: 460px;
 		left: 280px;
 		top: 160px;
 	}
 
-	.pinTitleHero{
+	.pinTitleHero {
 		font-size: 24px;
 		max-width: 350px;
 	}
-	.addressHero{
+	.addressHero {
 		font-size: 20px;
 		max-width: 250px;
 	}
-	.pinAddressContainerHero img{
+	.pinAddressContainerHero img {
 		width: 35px;
 		height: 35px;
 	}
-	.pinBtnContainer{
+	.pinBtnContainer {
 		align-items: center;
 	}
-	.pinBtnContainer button{
+	.pinBtnContainer button {
 		font-size: 24px;
 		width: 100%;
-
 	}
-	.heroContainer{
+	.heroContainer {
 		padding-top: 5px;
 	}
-	.heroContainer{
+	.heroContainer {
 		display: flex;
 		justify-content: center;
 		height: 100%;
 	}
-	.imageWrapperHero{
+	.imageWrapperHero {
 		top: 50%;
-    left: 50%;
-    transform: translate(-520px, -477px);
+		left: 50%;
+		transform: translate(-520px, -477px);
 	}
-	.pinContainerHeroContainerWrapper{
+	.pinContainerHeroContainerWrapper {
 		max-width: 90vw;
 		justify-content: center;
 		width: 90%;
 	}
-	.titleWrapperHero{
+	.titleWrapperHero {
 		width: 600px;
 	}
-	
-		.titleItemHero,
+
+	.titleItemHero,
 	.titleItemRedBoxHero {
 		font-size: 42px;
 	}
-	.titleHero:last-child{
+	.titleHero:last-child {
 		margin-right: -55px;
 	}
-	
 }
 @media (max-width: 450px) {
 	.groundImage {
@@ -636,84 +632,83 @@
 		top: 140px;
 		left: 300px;
 	}
-	.gradientBlackGround{
+	.gradientBlackGround {
 		top: 39px;
 	}
-	.gradientBlack{
+	.gradientBlack {
 		top: 125px;
 	}
-	.titleHero:last-child{
+	.titleHero:last-child {
 		margin-right: -30px;
 	}
-	.titleHero:first-child{
+	.titleHero:first-child {
 		margin-right: -15px;
 	}
-	.pinTitleHero{
+	.pinTitleHero {
 		font-size: 22px;
 	}
-	.addressHero{
+	.addressHero {
 		font-size: 18px;
 	}
-	.pinAddressContainerHero img{
+	.pinAddressContainerHero img {
 		width: 30px;
-    height: 30px;
+		height: 30px;
 	}
-	.pinContainerHero{
+	.pinContainerHero {
 		padding-top: 480px;
 	}
 }
 @media (max-width: 420px) {
-	.titleItemHero, .titleItemRedBoxHero{
+	.titleItemHero,
+	.titleItemRedBoxHero {
 		font-size: 38px;
 	}
-	.titleHero:last-child{
+	.titleHero:last-child {
 		margin-right: -10px;
 	}
-
 }
 @media (max-width: 400px) {
-	.titleHero:first-child{
+	.titleHero:first-child {
 		margin-right: -25px;
 	}
-	.titleHero:last-child{
+	.titleHero:last-child {
 		margin-right: 10px;
 	}
-	.pinBtnContainer button{
+	.pinBtnContainer button {
 		font-size: 22px;
 		height: 60px;
-
 	}
 }
 @media (max-width: 380px) {
-
 	.groundImage {
 		left: 250px;
 		top: 85px;
 	}
 	.teamImage {
 		top: 160px;
-        left: 310px;
+		left: 310px;
 	}
-	.gradientBlackGround{
+	.gradientBlackGround {
 		top: 26px;
 	}
-	.gradientBlack{
+	.gradientBlack {
 		top: 120px;
 	}
-	.titleItemHero, .titleItemRedBoxHero{
+	.titleItemHero,
+	.titleItemRedBoxHero {
 		font-size: 36px;
 	}
-	.pinContainerHero{
+	.pinContainerHero {
 		padding-top: 460px;
 	}
-	.pinTitleHero{
+	.pinTitleHero {
 		font-size: 20px;
 	}
-	.addressHero{
+	.addressHero {
 		font-size: 16px;
 		max-width: 200px;
 	}
-	.titleHero:last-child{
+	.titleHero:last-child {
 		margin-right: 40px;
 	}
 }

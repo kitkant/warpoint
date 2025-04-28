@@ -151,7 +151,6 @@
 	}
 	.descriptionWrapper {
 		padding: 50px 25px 40px 50px;
-
 	}
 	.descriptionTitle {
 		font-size: 26px;
@@ -222,129 +221,125 @@
 	.titleWrapper {
 		padding-bottom: 10px;
 	}
-	.descriptionTitle{
+	.descriptionTitle {
 		margin-left: -30px;
 	}
-	.descriptionTextWrapper{
+	.descriptionTextWrapper {
 		max-width: 440px;
 	}
-	.descriptionTextWrapper p:last-of-type{
+	.descriptionTextWrapper p:last-of-type {
 		max-width: 410px;
 	}
-	
 }
 
-@media(max-width: 640px){
-	.container{
+@media (max-width: 640px) {
+	.container {
 		max-width: 460px;
 	}
-	.title{
+	.title {
 		font-size: 32px;
 		margin-left: -85px;
 	}
-	.title span{
+	.title span {
 		margin: 0;
 	}
-	.descriptionImgWrapper{
+	.descriptionImgWrapper {
 		margin-top: -265px;
 	}
-	.redBox{
+	.redBox {
 		bottom: -10px;
 		left: -20px;
 		width: 500px;
 		height: 90px;
 	}
-	.descriptionTitle{
+	.descriptionTitle {
 		font-size: 20px;
 	}
-	.descriptionTitleWrapper{
+	.descriptionTitleWrapper {
 		max-width: 370px;
 	}
-	.descriptionTextWrapper{
+	.descriptionTextWrapper {
 		font-size: 16px;
 		gap: 10px;
 	}
-	.descriptionTextWrapper p:first-of-type{
+	.descriptionTextWrapper p:first-of-type {
 		max-width: 350px;
 	}
-	.descriptionTextWrapper p:last-of-type{
+	.descriptionTextWrapper p:last-of-type {
 		font-size: 16px;
 		max-width: 350px;
 	}
-	.descriptionGridWrapper{
+	.descriptionGridWrapper {
 		padding-top: 30px;
 		row-gap: 15px;
 	}
 }
-@media(max-width: 480px){
-	.container{
+@media (max-width: 480px) {
+	.container {
 		max-width: 90vw;
 	}
-	.title{
+	.title {
 		font-size: 36px;
 		margin-left: clamp(-70px, 17.6vw, -85px);
 	}
-	.title span{
+	.title span {
 		margin-left: 10px;
 	}
-	.imgWrapper{
+	.imgWrapper {
 		height: clamp(0px, 79.1vw, 380px);
 	}
-	.imgWrapper img{
+	.imgWrapper img {
 		width: 100%;
 		height: 100%;
 	}
-	.redBox{
+	.redBox {
 		left: 35%;
-        width: clamp(100px, 104vw, 500px);
-        transform: scale(.7, 1.1) skew(-15deg) translateX(-50%);
+		width: clamp(100px, 104vw, 500px);
+		transform: scale(0.7, 1.1) skew(-15deg) translateX(-50%);
 	}
-	.descriptionTitleWrapper{
+	.descriptionTitleWrapper {
 		padding: 40px 10px 20px 30px;
 		max-width: clamp(0px, 81.6vw, 392px);
-		
 	}
-	.playBtn img{
+	.playBtn img {
 		width: clamp(66px, 18.75vw, 90px) !important;
-        height: clamp(66px, 18.75vw, 90px) !important;
+		height: clamp(66px, 18.75vw, 90px) !important;
 	}
-	.descriptionTitle{
+	.descriptionTitle {
 		font-size: clamp(16px, 5.4vw, 26px);
 		margin-left: -20px;
 	}
-	.descriptionTextWrapper, .descriptionTextWrapper p:last-of-type{
+	.descriptionTextWrapper,
+	.descriptionTextWrapper p:last-of-type {
 		font-size: clamp(16px, 4vw, 22px);
 	}
-	.descriptionTextWrapper p:first-of-type{
-	
+	.descriptionTextWrapper p:first-of-type {
 		max-width: clamp(270px, 68vw, 320px);
-
 	}
-	.descriptionTextWrapper p:last-of-type{
+	.descriptionTextWrapper p:last-of-type {
 		max-width: clamp(285px, 70.8vw, 340px);
 	}
-	.descriptionGridWrapper{
+	.descriptionGridWrapper {
 		row-gap: clamp(15px, 5.2vw, 25px);
 	}
-	.detailWrapper{
+	.detailWrapper {
 		padding-top: clamp(20px, 8vw, 40px);
 	}
-	.moreBtn{
+	.moreBtn {
 		font-size: clamp(12px, 5vw, 16px);
 	}
 }
-@media(max-width: 400px){
-
-	.descriptionTitle{
+@media (max-width: 400px) {
+	.descriptionTitle {
 		margin-left: -18px;
 	}
 }
-@media(max-width: 380px){
-	.title{
+@media (max-width: 380px) {
+	.title {
 		font-size: 34px;
 		margin-left: clamp(-65px, 17.6vw, -85px);
 	}
-	.descriptionTitle{
+	.descriptionTitle {
 		margin-left: -15px;
 	}
 }

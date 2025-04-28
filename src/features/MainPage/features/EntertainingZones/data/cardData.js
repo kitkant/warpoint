@@ -1,4 +1,3 @@
-
 const cardData = [
 	{
 		title: 'vr-арена',
@@ -7,7 +6,6 @@ const cardData = [
 		subTitle: 'Так вы ещё не играли!',
 		position: 'left',
 		btn: 'Забронировать',
-
 	},
 	{
 		title: 'Лаунж-зона',
@@ -16,7 +14,7 @@ const cardData = [
 		subTitle: 'Запоминающееся мероприятие',
 		position: 'right',
 		btn: 'Провести мероприятие',
-	}
+	},
 ]
 
 export default cardData

@@ -31,11 +31,11 @@
 .subTitle {
 	color: #bdbdbd;
 	font-size: 20px;
-    line-height: 1.6;
+	line-height: 1.6;
 	max-width: 640px;
 	letter-spacing: 0.6px;
 }
-.cardWrapper{
+.cardWrapper {
 	display: grid;
 	grid-auto-rows: 762px;
 	grid-template-columns: 1fr 1fr;
@@ -43,96 +43,93 @@
 	max-width: 1160px;
 	padding-top: 80px;
 }
-@media(max-width: 1280px){
-	.title{
+@media (max-width: 1280px) {
+	.title {
 		font-size: 76px;
-
 	}
-	.subTitle{
+	.subTitle {
 		font-size: 18px;
 	}
 }
-@media(max-width: 1200px){
-	.container{
+@media (max-width: 1200px) {
+	.container {
 		max-width: 940px;
 	}
-	.title{
+	.title {
 		font-size: 62px;
 		margin-left: -145px;
 	}
-	.cardWrapper{
+	.cardWrapper {
 		grid-auto-rows: 685px;
 	}
 }
-@media(max-width: 960px){
-	.container{
+@media (max-width: 960px) {
+	.container {
 		max-width: 620px;
 	}
-	.title{
+	.title {
 		font-size: 48px;
 		margin-left: -120px;
 		white-space: nowrap;
 	}
-	.cardWrapper{
-	grid-template-columns: 1fr ;
-		
+	.cardWrapper {
+		grid-template-columns: 1fr;
 	}
-	.subTitle{
+	.subTitle {
 		max-width: 450px;
 	}
-	.titleContainer{
+	.titleContainer {
 		gap: 25px;
 	}
-	.cardWrapper{
+	.cardWrapper {
 		grid-auto-rows: 631px;
 	}
 }
-@media(max-width: 640px){
-	.title{
+@media (max-width: 640px) {
+	.title {
 		font-size: 32px;
 		margin-left: -75px;
 		padding: 5px 20px;
 	}
-	.container{
+	.container {
 		max-width: 460px;
 	}
-	.subTitle{
+	.subTitle {
 		font-size: 16px;
 	}
-	.cardWrapper{
+	.cardWrapper {
 		padding-top: 40px;
 		grid-auto-rows: 589px;
 	}
 }
-@media(max-width: 480px){
-	.title{
+@media (max-width: 480px) {
+	.title {
 		font-size: 36px;
 	}
-	.wrapper{
+	.wrapper {
 		padding-top: 200px;
 	}
-	.subTitle{
+	.subTitle {
 		font-size: 20px;
 		max-width: 350px;
 	}
-	.container{
+	.container {
 		max-width: 428px;
 		display: flex;
-    flex-direction: column;
-    max-width: 90vw;
+		flex-direction: column;
+		max-width: 90vw;
 	}
-	.cardWrapper{
-		/* grid-auto-rows: clamp(0px, 167.7vw, 805px); */
+	.cardWrapper {
 		grid-auto-rows: clamp(0px, 183.5vw, 881px);
 		gap: 50px;
 	}
 }
-@media(max-width: 380px){
-	.title{
+@media (max-width: 380px) {
+	.title {
 		font-size: 34px;
 		margin-left: -80px;
 	}
-	.subTitle{
-		font-size:  18px;
+	.subTitle {
+		font-size: 18px;
 	}
 }

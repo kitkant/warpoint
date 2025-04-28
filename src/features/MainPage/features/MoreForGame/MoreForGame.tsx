@@ -9,9 +9,6 @@ const MoreForGame = () => {
 	const laptop1200 = useMediaQuery(1202)
 	const tablet960 = useMediaQuery(961)
 	const mobile640 = useMediaQuery(641)
-	// const mobile480 = useMediaQuery(480)
-	// const mobile450 = useMediaQuery(450)
-	// const mobile380 = useMediaQuery(380)
 	const laptop640 = useMediaQuery(641)
 	return (
 		<div className={styles.wrapper}>
@@ -31,8 +28,9 @@ const MoreForGame = () => {
 							</p>
 							<p>
 								15 уникальных карт, 15 видов оружия
-								{ mobile640 ? <br/> : tablet960 ? <></> : <br />} и 3 игровых режима — нужно выбрать свой стиль сражения и
-								отправиться на поле боя
+								{mobile640 ? <br /> : tablet960 ? <></> : <br />} и 3 игровых
+								режима — нужно выбрать свой стиль сражения и отправиться на поле
+								боя
 							</p>
 						</div>
 						<div className={styles.descriptionGridWrapper}>
@@ -52,8 +50,10 @@ const MoreForGame = () => {
 						<div className={styles.imgWrapper}>
 							<Image
 								src={'/img/pages/main/moreForGame/warpoint_arena.jpeg'}
-								width={mobile640 ? 460 : tablet960 ? 560 : laptop1200 ? 400 : 580}
-								height={mobile640 ? 260 :laptop1200 ? 380 : 385}
+								width={
+									mobile640 ? 460 : tablet960 ? 560 : laptop1200 ? 400 : 580
+								}
+								height={mobile640 ? 260 : laptop1200 ? 380 : 385}
 								alt='game arena'
 							/>
 							<button className={styles.playBtn}>

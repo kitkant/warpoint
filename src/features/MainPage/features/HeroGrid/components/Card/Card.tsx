@@ -24,12 +24,16 @@ const Card = ({ img, title, text, height, index, cover, position }: IProps) => {
 					display: 'block',
 					height: height ? '100%' : 'auto',
 					objectFit: cover ? 'cover' : 'fill',
-					objectPosition: position
+					objectPosition: position,
 				}}
 				alt='8'
 				className={imgStyles.imgCard}
 			/>
-			<div className={styles.titleContainer + ' ' + styles.titleContainer + `${index}`}>
+			<div
+				className={
+					styles.titleContainer + ' ' + styles.titleContainer + `${index}`
+				}
+			>
 				<h3>{title}</h3>
 				<div>
 					<Image
@@ -43,7 +47,11 @@ const Card = ({ img, title, text, height, index, cover, position }: IProps) => {
 			</div>
 			<div className={styles.backgroundBlack}></div>
 			<div className={styles.overlay}>
-				<div className={styles.textContainer+ ' ' + styles.textContainer + `${index}`}>
+				<div
+					className={
+						styles.textContainer + ' ' + styles.textContainer + `${index}`
+					}
+				>
 					<p>{text}</p>
 				</div>
 			</div>

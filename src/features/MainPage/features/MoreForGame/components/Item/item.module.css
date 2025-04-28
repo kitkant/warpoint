@@ -1,36 +1,36 @@
-.text{
+.text {
 	white-space: pre-line;
 	line-height: 1.6;
 }
-.wrapper{
+.wrapper {
 	display: flex;
 	gap: 20px;
 	align-items: center;
-	color: #BDBDBD;
+	color: #bdbdbd;
 	font-size: 16px;
 }
 
-@media(max-width: 960px){
-	.text{
+@media (max-width: 960px) {
+	.text {
 		white-space: normal;
 	}
 }
-@media(max-width: 640px){
-	.text{
+@media (max-width: 640px) {
+	.text {
 		font-size: 14px;
 	}
 }
-@media(max-width: 480px){
-	.wrapper{
+@media (max-width: 480px) {
+	.wrapper {
 		flex-direction: column;
 		align-items: start;
 		gap: clamp(10px, 4.1vw, 20px);
 	}
-	.text{
+	.text {
 		font-size: 18px;
 		white-space: pre-line;
 	}
-	.wrapper img{
+	.wrapper img {
 		width: clamp(0px, 11.4vw, 55px);
 		height: clamp(0px, 11.4vw, 55px);
 	}

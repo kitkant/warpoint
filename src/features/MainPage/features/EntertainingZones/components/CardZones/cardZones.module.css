@@ -8,7 +8,7 @@
 .imgContainer {
 	position: relative;
 	width: 100%;
-	height: 317px; /* можно поставить любую высоту */
+	height: 317px; 
 	overflow: hidden;
 	position: relative;
 	z-index: 0;

@@ -14,7 +14,6 @@ const Hero = () => {
 	const mobile450 = useMediaQuery(450)
 	const mobile380 = useMediaQuery(380)
 
-
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.heroContainer}>
@@ -28,10 +27,9 @@ const Hero = () => {
 									: '/img/pages/main/ground.png'
 							}
 							width={
-								mobile380?
-								550
-								:
-								mobile450
+								mobile380
+									? 550
+									: mobile450
 									? 650
 									: mobile480
 									? 750
@@ -48,10 +46,9 @@ const Hero = () => {
 									: 900
 							}
 							height={
-								mobile380?
-								430
-								:
-								mobile450
+								mobile380
+									? 430
+									: mobile450
 									? 460
 									: mobile480
 									? 480
@@ -75,10 +72,9 @@ const Hero = () => {
 									: '/img/pages/main/team.png'
 							}
 							width={
-								mobile380?
-								400
-								:
-								mobile450
+								mobile380
+									? 400
+									: mobile450
 									? 430
 									: mobile480
 									? 500
@@ -95,10 +91,9 @@ const Hero = () => {
 									: 790
 							}
 							height={
-								mobile380?
-								400
-								:
-								mobile450
+								mobile380
+									? 400
+									: mobile450
 									? 430
 									: mobile480
 									? 500
