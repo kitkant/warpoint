@@ -11,7 +11,7 @@ interface IProps {
 	position: string
 	btn: string
 }
-// title, subTitle, text, img, position
+
 const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
 	const laptop1200 = useMediaQuery(1202)
 	const laptop640 = useMediaQuery(641)
