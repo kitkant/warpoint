@@ -1,0 +1,281 @@
+.wrapper {
+	background-color: #262626;
+	width: 100%;
+	padding: 60px;
+	max-width: 1040px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	height: 100%;
+}
+.title {
+	color: #fbfbfb;
+	text-transform: uppercase;
+	font-size: 28px;
+	transform: scale(0.9, 1.3);
+	margin-left: -11px;
+}
+.subTitle {
+	color: #e8e9eb;
+	opacity: 0.4;
+	font-size: 14px;
+	transform: translateY(-10%);
+}
+.titleText {
+	color: #e8e9eb;
+	font-size: 16px;
+	line-height: 1.6;
+}
+.titleContainer {
+	display: flex;
+	align-items: end;
+	max-width: 350px;
+	justify-content: space-between;
+}
+.titleWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 450px;
+	position: relative;
+	z-index: 1;
+}
+
+.priceTitle,
+.priceSubTitle {
+	color: #e8e9eb;
+	opacity: 0.4;
+	font-size: 14px;
+	white-space: nowrap;
+}
+.priceTitleWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.item:last-of-type {
+	padding-right: 20px;
+	padding-left: 40px;
+}
+
+.priceText {
+	transform: translateY(-50%);
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.6;
+}
+.priceBoldText {
+	transform: scale(0.9, 1.3);
+	font-size: 22px;
+	color: #fff;
+	font-weight: 800;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.priceSubText {
+	color: #fff;
+	font-size: 16px;
+	white-space: nowrap;
+}
+.priceTextWrapper {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.6;
+	align-items: center;
+}
+
+.priceWrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 100%;
+	max-width: 560px;
+	position: relative;
+	z-index: 1;
+}
+
+.item {
+	padding: 5px 16px 10px 16px;
+	border-left: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border-left: 2px solid rgba(226, 50, 57, 0.8);
+	max-height: 115px;
+}
+
+.blueline {
+	position: absolute;
+	left: -60px;
+	top: -30px;
+	z-index: -1;
+}
+.redline {
+	position: absolute;
+	right: -60;
+	bottom: -30px;
+	z-index: -1;
+}
+
+@media (max-width: 1200px) {
+	.blueline {
+		left: -40px;
+		top: -20px;
+	}
+	.redline {
+		right: -40px;
+		bottom: -40px;
+	}
+	.wrapper {
+		max-width: 850px;
+		padding: 60px 30px 60px 60px;
+	}
+	.title {
+		font-size: 26px;
+	}
+	.titleWrapper {
+		max-width: 330px;
+		width: 100%;
+	}
+	.titleText {
+		max-width: 320px;
+	}
+	.priceWrapper {
+		max-width: 470px;
+	}
+	.item {
+		padding: 5px 14px 10px;
+	}
+	.item:last-of-type {
+		padding-left: 20px;
+	}
+}
+@media (max-width: 960px) {
+	.wrapper {
+		flex-direction: column;
+		max-width: 540px;
+		padding: 60px 30px 60px 50px;
+		gap: 20px;
+	}
+	.blueline {
+		left: -40px;
+		top: -20px;
+	}
+	.redline {
+		right: -40px;
+		bottom: -40px;
+	}
+	.titleContainer {
+		max-width: 330px;
+	}
+	.titleWrapper,
+	.titleText,
+	.priceWrapper {
+		max-width: none;
+	}
+	.titleText {
+		font-size: 14px;
+	}
+	.item {
+		max-height: 140px;
+		height: 100%;
+	}
+	.priceWrapper {
+		padding-bottom: 10px;
+	}
+}
+@media (max-width: 640px) {
+	.wrapper {
+		padding: 40px 30px 40px 30px;
+		max-width: 400px;
+		gap: 30px;
+	}
+	.title {
+		font-size: 20px;
+		margin-left: -10px;
+	}
+	.subTitle {
+		font-size: 12px;
+	}
+	.titleContainer {
+		max-width: 300px;
+	}
+	.titleText {
+		max-width: 350px;
+	}
+	.priceBoldText {
+		font-size: 20px;
+	}
+	.item {
+		padding: 5px 12px 10px;
+	}
+	.item:first-of-type {
+		border-left: none;
+		padding-left: 0;
+	}
+	.item:last-of-type {
+		padding-right: 0;
+	}
+	.blueline {
+		left: -40px;
+		top: -10px;
+	}
+	.redline {
+		right: -40px;
+		bottom: -10px;
+	}
+}
+@media (max-width: 480px) {
+	.wrapper {
+		padding-right: 20px;
+		width: auto;
+	}
+	.title {
+		font-size: clamp(16px, 5.4vw, 26px);
+	}
+	.titleContainer {
+		flex-direction: column;
+		align-items: start;
+		gap: 10px;
+	}
+	.subTitle {
+		font-size: 16px;
+	}
+	.titleText {
+		font-size: clamp(14px, 4.2vw, 22px);
+	}
+	.item {
+		padding: 10px;
+	}
+	.item:last-of-type {
+		padding: 10px;
+	}
+	.priceTitle,
+	.priceSubTitle {
+		font-size: clamp(12px, 3.3vw, 16px);
+	}
+	.priceBoldText {
+		font-size: clamp(18px, 4.1vw, 20px);
+	}
+
+	.priceSubTitle {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.priceSubText{
+		font-size: clamp(12px, 3.3vw, 16px);
+	}
+	.priceText{
+		white-space: nowrap;
+	}
+	.priceTitle{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}

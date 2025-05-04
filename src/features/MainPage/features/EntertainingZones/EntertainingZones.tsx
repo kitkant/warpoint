@@ -8,7 +8,7 @@ const EntertainingZones = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<div className={styles.titleContainer}>
-					<p className={styles.title}>РАЗВЛЕКАТЕЛЬНЫЕ ЗОНЫ</p>
+					<h2 className={styles.title}>РАЗВЛЕКАТЕЛЬНЫЕ ЗОНЫ</h2>
 					<p className={styles.subTitle}>
 						Сразитесь с друзьями на арене, пройдите увлекательный квест или
 						прокатитесь на захватывающих дух американских горках
