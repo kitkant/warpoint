@@ -1,9 +1,13 @@
+import Button from '@/app/UI/Button/Button'
 import { Fragment } from 'react'
 import styles from '../../styles/selectTariff.module.css'
 import Card from './components/Card'
 import dataTariff from './data/data'
+import useMediaQuery from '@/app/hooks/useMediaQuery'
 
 const SelectTariff = () => {
+	const desktop1920 = useMediaQuery(1920)
+	const mobile480 = useMediaQuery(480)
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
@@ -28,6 +32,16 @@ const SelectTariff = () => {
 							</Fragment>
 						)
 					})}
+				</div>
+				<div className={styles.btnWrapper}>
+				<Button
+					title={'Забронировать'}
+					primary={true}
+					width={mobile480 ? 406 : desktop1920 ? 240 : 305}
+					height={mobile480 ? 75 : desktop1920 ? 50 : 75}
+					onClick={() => console.log('click')}
+					header={false}
+				/>
 				</div>
 			</div>
 		</div>
