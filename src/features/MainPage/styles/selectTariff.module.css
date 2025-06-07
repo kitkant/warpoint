@@ -119,6 +119,7 @@
 	.btnWrapper button{
 		width: 100%;
 		height: clamp(0px, 15.625vw, 75px);
+		font-size: clamp(20px, 5vw, 24px);
 	}
 }
 @media(max-width: 380px){
