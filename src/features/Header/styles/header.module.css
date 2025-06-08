@@ -303,9 +303,14 @@
 .nav_containerButton__container__mobile {
 	display: none;
 }
+
+.nav_containerButton__containerPhoneMobile{
+	display: none;
+}
 @media(max-width: 1710px){
 	.header .wrapper,.headerFixed .wrapper {
-		max-width: 1180px;
+		max-width: 1160px;
+		padding: 15px 0px 0px;
 	}
 }
 
@@ -319,23 +324,34 @@
 		gap: 10px;
 	}
 	.header .wrapper,.headerFixed .wrapper {
-		max-width: 940px;
+		max-width: 620px;
 	}
 }
 @media(max-width: 640px){
 	.removeBtnOnMobile{
 		display: none;
 	}
+	.header .wrapper,.headerFixed .wrapper {
+		max-width: 460px;
+	}
 }
-/* убрать */
 
-@media (max-width: 400px) {
-	.headerFixed .wrapper{
-		padding-left: 0;
-		padding-right: 0;
+@media(max-width: 480px){
+	.header .wrapper,.headerFixed .wrapper {
+		max-width: 90vw;
 	}
-	.header .wrapper{
-		padding-left: 0;
-		padding-right: 0;
+	.nav_containerButton__containerPhone{
+		display: none;
 	}
+	.nav_containerButton__containerPhoneMobile{
+		width: 45px;
+		height: 45px;
+		position: relative;
+		cursor: pointer;
+		background-color: #333;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 }
