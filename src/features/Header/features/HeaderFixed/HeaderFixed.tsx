@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '../../styles/header.module.css'
 
 interface IProps {
@@ -40,6 +41,19 @@ const HeaderFixed = ({ scroll }: IProps) => {
 						>
 							+7 (495) 260-99-34
 						</a>
+						<a
+						className={styles.nav_containerButton__containerPhoneMobile}
+						href='tel:+7 (495) 260-99-34'
+					>
+						
+							<Image src={'/img/socials/phone.webp'} alt='phone' width={25} height={25}
+						style={{
+							width: '60%',
+							height: 'auto',
+							objectFit: 'cover'
+						}} />
+					
+					</a>
 						<span className={styles.removeBtnOnMobile}>
 							<a
 								className={styles.nav_containerButton__containerReservation}
