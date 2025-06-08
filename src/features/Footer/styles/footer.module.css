@@ -98,3 +98,88 @@
 	display: flex;
 	gap: 20px;
 }
+
+@media (max-width: 1200px) {
+	.wrapper {
+		max-width: 940px;
+	}
+	.footerLinksContainer {
+		flex-direction: column-reverse;
+	}
+	.footerButtonWrapper {
+		padding-top: 20px;
+	}
+}
+@media (max-width: 960px) {
+	.wrapper {
+		max-width: 620px;
+	}
+	.footerNavContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 20px;
+	}
+	.footerButtonWrapper {
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+	}
+	.footerButtonContainerLocations__buttonBtn {
+		width: 180px;
+	}
+	.footerButtonContainerLocations__button {
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+@media (max-width: 640px) {
+	.wrapper {
+		max-width: 460px;
+	}
+	.footerNavContainer{
+		column-gap: 20px;
+	}
+	.footerButtonContainerLocations__buttonBtn{
+		font-size: 12px;
+	}
+}
+@media(max-width: 480px){
+	.wrapper{
+		max-width: 90vw;
+	}
+	.footerNavContainer__navigationItem span{
+		font-size: clamp(22px, 5vw, 24px);
+	}
+	.footerNavContainer__navigationItem a{
+		font-size: clamp(18px, 4.16vw, 20px);
+	}
+	.footerNavContainer {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 20px;
+	}
+	.footerInfoContainer__root{
+		font-size: clamp(16px, 3.75vw, 18px);
+		max-width: 300px;
+	}
+	.footerInfoContainer{
+		max-width: 320px;
+	}
+	.footerButtonContainerLocations__button{
+		display: none;
+	}
+	.footerButtonContainerStore__buttonAppstore, .footerButtonContainerStore__button, .footerButtonContainer{
+		width: 100%;
+	}
+	.footerButtonContainerStore__buttonAppstore{
+		position: relative;
+		height: auto;
+	}
+	.footerButtonContainerStore__button{
+		height: 100%;
+		max-height: 52px;
+	}
+	.footerButtonContainer{
+		height: 52px;
+	}
+}

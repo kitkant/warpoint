@@ -1,7 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './styles/footer.module.css'
-import Image from 'next/image'
-
 
 const Footer = () => {
 	return (
@@ -11,9 +10,9 @@ const Footer = () => {
 					<div className={styles.footerInfoContainer}>
 						<Link href='/'>
 							<Image
-							width={156}
-							height={21}
-							alt='logo'
+								width={156}
+								height={21}
+								alt='logo'
 								src='/img/pages/contacts/logo.svg'
 							/>
 						</Link>
@@ -122,15 +121,36 @@ const Footer = () => {
 								className={styles.footerButtonContainerStore__buttonAppstore}
 							>
 								<Link href='/'>
-									<Image width={122} height={32} alt='store' src='/img/pages/contacts/appstore.png' />
+									<Image
+										style={{
+											objectFit: 'fill',
+											width: '100%',
+											height: '100%',
+											borderRadius: '8px',
+											maxHeight: '52px',
+										}}
+										fill
+										alt='store'
+										src='/img/pages/contacts/appstore.png'
+									/>
 								</Link>
 							</div>
 							<div
 								className={styles.footerButtonContainerStore__buttonAppstore}
 							>
 								<Link href='/'>
-									{' '}
-									<Image width={122} height={32} alt='store' src='/img/pages/contacts/playmarket.png' />
+									<Image
+										style={{
+											objectFit: 'fill',
+											width: '100%',
+											height: '100%',
+											borderRadius: '8px',
+											maxHeight: '52px',
+										}}
+										fill
+										alt='store'
+										src='/img/pages/contacts/playmarket.png'
+									/>
 								</Link>
 							</div>
 						</div>
