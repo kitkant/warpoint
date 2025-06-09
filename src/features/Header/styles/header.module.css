@@ -324,6 +324,11 @@
 		gap: 10px;
 	}
 	.header .wrapper,.headerFixed .wrapper {
+		max-width: 940px;
+	}
+}
+@media(max-width: 960px){
+.header .wrapper,.headerFixed .wrapper {
 		max-width: 620px;
 	}
 }
