@@ -25,11 +25,11 @@
 }
 .titleItemRedBoxHero {
 	background-color: #e23239;
-	padding: 10px 40px;
+	padding: 5px 40px;
 }
 
 .titleHero:nth-child(1) {
-	margin-right: -170px;
+	margin-right: -140px;
 }
 .titleHero:nth-child(2) {
 	margin-right: 70px;
@@ -180,7 +180,7 @@
 	}
 
 	.titleHero:nth-child(1) {
-		margin-right: -180px;
+		margin-right: -140px;
 		line-height: 1.3;
 	}
 	.titleHero:nth-child(2) {
@@ -201,9 +201,6 @@
 	.addressHero {
 		max-width: 180px;
 	}
-	/* .pinContainerHero {
-		right: -60px;
-	} */
 	.pinBtnContainer {
 		gap: 30px;
 	}
@@ -268,7 +265,7 @@
 		max-width: 940px;
 	}
 	.titleHero:first-child {
-		margin-right: -156px;
+		margin-right: -140px;
 	}
 	.titleHero:nth-child(2) {
 		margin-right: -85px;
