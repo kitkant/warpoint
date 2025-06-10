@@ -4,7 +4,7 @@ import styles from '../../styles/heroGrid.module.css'
 import Card from './components/Card/Card'
 
 const HeroGrid = () => {
-	const laptop1200 = useMediaQuery(1202)
+	const laptop1200 = useMediaQuery(1200)
 	const laptop960 = useMediaQuery(960)
 	const laptop640 = useMediaQuery(641)
 	const mobile480 = useMediaQuery(480)

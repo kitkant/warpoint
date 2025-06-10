@@ -213,6 +213,9 @@
 	}
 }
 @media (max-width: 480px) {
+	.wrapper{
+		padding-top: 200px;
+	}
 	.container {
 		max-width: 90vw;
 	}

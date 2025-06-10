@@ -138,6 +138,7 @@
 .pinAddressContainerHero {
 	display: flex;
 	gap: 20px;
+	align-items: center;
 }
 .addressHero {
 	color: #787878;
@@ -538,6 +539,9 @@
 	}
 }
 @media (max-width: 480px) {
+	.wrapper {
+		padding-top: 0;
+	}
 	.groundImage {
 		left: 150px;
 		top: 60px;
@@ -652,7 +656,8 @@
 		height: 30px;
 	}
 	.pinContainerHero {
-		padding-top: 480px;
+		padding-top: 430px;
+		padding-bottom: 86px;
 	}
 }
 @media (max-width: 420px) {
@@ -696,7 +701,8 @@
 		font-size: 36px;
 	}
 	.pinContainerHero {
-		padding-top: 460px;
+		padding-top: 430px;
+		padding-bottom: 67px;
 	}
 	.pinTitleHero {
 		font-size: 20px;
