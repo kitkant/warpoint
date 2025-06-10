@@ -16,7 +16,7 @@
 .title {
 	text-transform: uppercase;
 	color: #fbfbfb;
-	font-size: 78px;
+	font-size: 76px;
 	font-weight: 800;
 	transform: scale(0.7, 1.1) skew(-20deg);
 	margin-left: -190px;
@@ -27,7 +27,7 @@
 }
 .title > span {
 	background-color: #e23239;
-	padding: 10px 35px 10px 35px;
+	padding: 5px 35px 5px 35px;
 }
 .descriptionWrapper {
 	padding: 60px 30px 40px 60px;
@@ -128,7 +128,12 @@
 	z-index: -1;
 	background-color: #e23239;
 }
-
+@media(max-width: 1280px){
+		.title{
+			font-size: 74px;
+			
+		}
+}
 @media (max-width: 1200px) {
 	.container {
 		max-width: 940px;
@@ -138,7 +143,7 @@
 		flex-direction: column;
 		align-items: start;
 		gap: 10px;
-		margin-left: -180px;
+		margin-left: -170px;
 	}
 	.title span {
 		padding: 5px 20px;
@@ -184,7 +189,7 @@
 	}
 	.title {
 		font-size: 48px;
-		margin-left: -120px;
+		margin-left: -115px;
 		gap: 5px;
 	}
 	.title span {

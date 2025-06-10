@@ -17,10 +17,10 @@
 }
 .title {
 	background-color: #e23239;
-	padding: 10px 35px 10px 35px;
+	padding: 5px 35px 5px 35px;
 	text-transform: uppercase;
 	color: #fbfbfb;
-	font-size: 78px;
+	font-size: 76px;
 	font-weight: 800;
 	transform: scale(0.7, 1.1) skew(-20deg);
 	margin-left: -125px;
@@ -51,6 +51,11 @@
 @media(max-width: 1920px){
 	.btnWrapper button{
 		font-size: 16px;
+	}
+}
+@media(max-width: 1280px){
+	.title{
+		font-size: 74px;
 	}
 }
 @media(max-width: 1200px){

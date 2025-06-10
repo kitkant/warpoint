@@ -15,7 +15,7 @@ const HeroGrid = () => {
 				<p className={styles.titleItem + ' ' + styles.firstItem}>
 					В компьютерной игре
 				</p>
-				<p className={styles.titleItem}>ВЫ ИГРАЕТЕ ЗА ГЕРОЯ,</p>
+				<p className={styles.titleItem + ' ' + styles.secondItem}>ВЫ ИГРАЕТЕ ЗА ГЕРОЯ,</p>
 				<div className={styles.titleLastContainer}>
 					<p className={styles.titleItem}>а в WARPOINT</p>
 					<p className={styles.titleItem + ' ' + styles.lastItem}>

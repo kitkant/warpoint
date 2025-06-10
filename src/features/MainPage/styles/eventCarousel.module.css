@@ -38,7 +38,7 @@
 	white-space: nowrap;
 	text-transform: uppercase;
 	color: #fbfbfb;
-	font-size: 78px;
+	font-size: 76px;
 	font-weight: 800;
 	transform: scale(0.7, 1.1) skew(-20deg);
 }
@@ -47,7 +47,7 @@
 }
 .redTitle {
 	background-color: #e23239;
-	padding: 10px 40px 10px 35px;
+	padding: 5px 40px 5px 35px;
 	margin-left: -50px;
 }
 .textContainer {
