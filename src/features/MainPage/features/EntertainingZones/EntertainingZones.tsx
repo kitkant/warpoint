@@ -25,6 +25,7 @@ const EntertainingZones = () => {
 									img={item.img}
 									position={item.position}
 									btn={item.btn}
+									btnLink={item.btnLink}
 								/>
 							</Fragment>
 						)

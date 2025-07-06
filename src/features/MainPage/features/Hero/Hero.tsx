@@ -1,11 +1,12 @@
 import useMediaQuery from '@/app/hooks/useMediaQuery'
 import Button from '@/app/UI/Button/Button'
+import { useModal } from '@/context/ModalContext'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
-import styles from '../../styles/hero.module.css'
-import { gsap } from "gsap"
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useCallback, useEffect, useRef } from 'react'
-gsap.registerPlugin(ScrollTrigger);
+import styles from '../../styles/hero.module.css'
+gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
 	const desktop1710 = useMediaQuery(1711)
@@ -17,82 +18,83 @@ const Hero = () => {
 	const mobile480 = useMediaQuery(480)
 	const mobile450 = useMediaQuery(450)
 	const mobile380 = useMediaQuery(380)
-
+	const { openModal } = useModal()
 
 	const elementsRef = useRef(new Map())
 
-	const setRef = useCallback((id: string) => (el : HTMLElement | null) => {
-    if (el) {
-      elementsRef.current.set(id, el);
-    } else {
-      elementsRef.current.delete(id);
-    }
-  }, []);
+	const setRef = useCallback(
+		(id: string) => (el: HTMLElement | null) => {
+			if (el) {
+				elementsRef.current.set(id, el)
+			} else {
+				elementsRef.current.delete(id)
+			}
+		},
+		[]
+	)
 
-useEffect(() => {
+	useEffect(() => {
+		const elementsIds = ['title1', 'title2', 'title3', 'title4']
 
-	const elementsIds = ['title1', 'title2', 'title3', 'title4']
+		const elements = elementsIds.map(id => elementsRef.current.get(id))
 
-	const elements = elementsIds.map( id => elementsRef.current.get(id))
+		if (elements.some(el => !el)) {
+			return
+		}
 
-	if(elements.some(el => !el)){
-		return
-	}
+		const [title1, title2, title3, title4] = elements
 
+		gsap.to(title1, {
+			scrollTrigger: {
+				trigger: title1,
+				start: 'top 80%',
+				once: true,
+			},
+			duration: 1,
+			opacity: 1,
+			x: 0,
+			ease: 'power2.out',
+			onStart: () => title1.classList.remove(styles.gsapHidden),
+		})
 
-	const [title1, title2, title3, title4] = elements
+		gsap.to(title2, {
+			scrollTrigger: {
+				trigger: title2,
+				start: 'top 100%',
+				once: true,
+			},
+			duration: 1.5,
+			opacity: 1,
+			x: 0,
+			ease: 'power2.out',
+			onStart: () => title2.classList.remove(styles.gsapHidden),
+		})
 
-  gsap.to(title1, {
-    scrollTrigger: {
-      trigger: title1,
-      start: 'top 80%',
-      once: true,
-    },
-    duration: 1,
-    opacity: 1,
-    x: 0,
-    ease: 'power2.out',
-    onStart: () => title1.classList.remove(styles.gsapHidden),
-  });
-
-  gsap.to(title2, {
-    scrollTrigger: {
-      trigger: title2,
-      start: 'top 100%',
-      once: true,
-    },
-    duration: 1.5,
-    opacity: 1,
-    x: 0,
-    ease: 'power2.out',
-    onStart: () => title2.classList.remove(styles.gsapHidden),
-  });
-
-	gsap.to(title3, {
-    scrollTrigger: {
-      trigger: title3,
-      start: 'top 100%',
-      once: true,
-    },
-    duration: 1.5,
-    opacity: 1,
-    x: 0,
-    ease: 'power2.out',
-    onStart: () => title3.classList.remove(styles.gsapHiddenRedBox),
-  });
-	gsap.to(title4, {
-    scrollTrigger: {
-      trigger: title4,
-      start: 'top 100%',
-      once: true,
-    },
-    duration: 1.5,
-    opacity: 1,
-    x: 0,
-    ease: 'power2.out',
-    onStart: () => title4.classList.remove(styles.gsapHiddenRedBox),
-  });
-}, []);
+		gsap.to(title3, {
+			scrollTrigger: {
+				trigger: title3,
+				start: 'top 100%',
+				once: true,
+			},
+			duration: 1.5,
+			opacity: 1,
+			x: 0,
+			ease: 'power2.out',
+			onStart: () => title3.classList.remove(styles.gsapHiddenRedBox),
+		})
+		gsap.to(title4, {
+			scrollTrigger: {
+				trigger: title4,
+				start: 'top 100%',
+				once: true,
+			},
+			duration: 1.5,
+			opacity: 1,
+			x: 0,
+			ease: 'power2.out',
+			onStart: () => title4.classList.remove(styles.gsapHiddenRedBox),
+		})
+	}, [])
 
 	return (
 		<div className={styles.wrapper}>
@@ -199,19 +201,45 @@ useEffect(() => {
 					<div className={styles.titleWrapperHeroContainer}>
 						<div className={styles.titleWrapperHero}>
 							<div className={styles.titleHero}>
-								<p id='title1' className={styles.titleItemHero + ' ' + styles.gsapHidden} ref={setRef('title1')} >Берите друзей И УСТРОЙте</p>
+								<p
+									id='title1'
+									className={styles.titleItemHero + ' ' + styles.gsapHidden}
+									ref={setRef('title1')}
+								>
+									Берите друзей И УСТРОЙте
+								</p>
 							</div>
-		
+
 							<div className={styles.titleHero}>
-								<p id='title2' ref={setRef('title2')} className={styles.titleItemHero + ' ' + styles.gsapHidden}>эпичную битву</p>
+								<p
+									id='title2'
+									ref={setRef('title2')}
+									className={styles.titleItemHero + ' ' + styles.gsapHidden}
+								>
+									эпичную битву
+								</p>
 							</div>
 							<div className={styles.titleHero}>
-								<p className={styles.titleItemRedBoxHero + ' ' + styles.gsapHiddenRedBox} id='title3' ref={setRef('title3')}>
+								<p
+									className={
+										styles.titleItemRedBoxHero + ' ' + styles.gsapHiddenRedBox
+									}
+									id='title3'
+									ref={setRef('title3')}
+								>
 									на арене виртуальной
 								</p>
 							</div>
 							<div className={styles.titleHero}>
-								<p className={styles.titleItemRedBoxHero + ' ' + styles.gsapHiddenRedBox }id='title4' ref={setRef('title4')}>РЕАЛЬНОСТИ</p>
+								<p
+									className={
+										styles.titleItemRedBoxHero + ' ' + styles.gsapHiddenRedBox
+									}
+									id='title4'
+									ref={setRef('title4')}
+								>
+									РЕАЛЬНОСТИ
+								</p>
 							</div>
 						</div>
 					</div>
@@ -228,7 +256,7 @@ useEffect(() => {
 										primary={true}
 										width={mobile480 ? 406 : desktop1710 ? 170 : 205}
 										height={mobile480 ? 75 : desktop1710 ? 50 : 60}
-										onClick={() => console.log('click')}
+										onClick={() => openModal('RESPONSIVE')}
 										header={false}
 									/>
 									<div className={styles.pinAddressContainerHero}>

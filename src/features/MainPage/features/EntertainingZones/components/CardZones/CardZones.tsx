@@ -2,6 +2,7 @@ import useMediaQuery from '@/app/hooks/useMediaQuery'
 import Button from '@/app/UI/Button/Button'
 import Image from 'next/image'
 import styles from './cardZones.module.css'
+import { ModalType, useModal } from '@/context/ModalContext'
 
 interface IProps {
 	title: string
@@ -10,11 +11,13 @@ interface IProps {
 	img: string
 	position: string
 	btn: string
+	btnLink: string
 }
 
-const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
+const CardZones = ({ title, subTitle, text, img, position, btn, btnLink }: IProps) => {
 	const laptop1200 = useMediaQuery(1202)
 	const laptop640 = useMediaQuery(641)
+	const {openModal} = useModal()
 
 	return (
 		<div className={styles.container}>
@@ -57,7 +60,7 @@ const CardZones = ({ title, subTitle, text, img, position, btn }: IProps) => {
 							primary={true}
 							width={position === 'left' ? 175 : 256}
 							height={51}
-							onClick={() => console.log('click')}
+							onClick={() => openModal(btnLink as ModalType)}
 							header={false}
 						/>
 						{position === 'left' ? (

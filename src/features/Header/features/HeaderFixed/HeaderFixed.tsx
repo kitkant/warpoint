@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import styles from '../../styles/header.module.css'
+import { useModal } from '@/context/ModalContext'
+import Button from '@/app/UI/Button/Button'
 
 interface IProps {
 	scroll: number
 }
 
 const HeaderFixed = ({ scroll }: IProps) => {
+		const { openModal } = useModal()
+	
 	return (
 		<header
 			className={styles.headerFixed + ' ' + (scroll >= 300 ? '' : styles.hide)}
@@ -55,12 +59,23 @@ const HeaderFixed = ({ scroll }: IProps) => {
 					
 					</a>
 						<span className={styles.removeBtnOnMobile}>
-							<a
+							{/* <a
 								className={styles.nav_containerButton__containerReservation}
 								href='#BukzaContainer15639'
 							>
 								Забронировать
-							</a>
+							</a> */}
+							<Button
+								primary={true}
+								width={170}
+								height={45}
+								title={'Забронировать'}
+								onClick={() => {
+									openModal('RESPONSIVE')
+							
+								}}
+								header={true}
+							/>
 						</span>
 						<button className={styles.nav_containerButton__wrapper__burgerMenu}>
 							<div className={styles.nav_containerButton__burgerMenu}></div>

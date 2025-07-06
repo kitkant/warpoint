@@ -1,0 +1,15 @@
+.input{
+	width: calc(100% - 124px);
+	height: 61px;
+	font-size: 18px;
+	padding-left: 120px;
+}
+.input.error, .input:focus.error{
+	border: 2px red solid;
+}
+.inputEmpty{
+	width: calc(100% - 24px);
+	height: 61px;
+	font-size: 18px;
+	padding-left: 20px;
+}

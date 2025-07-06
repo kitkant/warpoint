@@ -1,9 +1,12 @@
 'use client'
+import Modal from '@/components/Modal'
+import Footer from '@/features/Footer/Footer'
 import styled from '@emotion/styled'
 import localFont from 'next/font/local'
+import { ModalProvider } from '../context/ModalContext'
 import './globals.css'
 import HeaderLayout from './layouts/HeaderLayout'
-import Footer from '@/features/Footer/Footer'
+import LayoutWrapper from './layouts/LayoutWrapper'
 
 const gilroy = localFont({
 	src: [
@@ -28,14 +31,17 @@ export default function RootLayout({
 			<head>
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
-				<title>
-					WARPOINT
-				</title>
+				<title>WARPOINT</title>
 			</head>
 			<Body className={gilroy.className}>
-				<HeaderLayout />
-				{children}
-				<Footer/>
+				<ModalProvider>
+					<LayoutWrapper>
+						<HeaderLayout />
+						{children}
+						<Footer />
+					</LayoutWrapper>
+					<Modal />
+				</ModalProvider>
 			</Body>
 		</html>
 	)

@@ -4,10 +4,13 @@ import styles from '../../styles/selectTariff.module.css'
 import Card from './components/Card'
 import dataTariff from './data/data'
 import useMediaQuery from '@/app/hooks/useMediaQuery'
+import { useModal } from '@/context/ModalContext'
 
 const SelectTariff = () => {
 	const desktop1920 = useMediaQuery(1920)
 	const mobile480 = useMediaQuery(480)
+	const { openModal } = useModal()
+	
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
@@ -39,7 +42,7 @@ const SelectTariff = () => {
 					primary={true}
 					width={mobile480 ? 406 : desktop1920 ? 240 : 305}
 					height={mobile480 ? 75 : desktop1920 ? 50 : 75}
-					onClick={() => console.log('click')}
+					onClick={() => openModal("RESPONSIVE")}
 					header={false}
 				/>
 				</div>

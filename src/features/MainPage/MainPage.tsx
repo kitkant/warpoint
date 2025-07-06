@@ -15,8 +15,8 @@ const MainPage = () => {
 			<HeroGrid />
 			<EntertainingZones />
 			<MoreForGame />
-			<SelectTariff/>
-			<EventCarousel/>
+			<SelectTariff />
+			<EventCarousel />
 		</main>
 	)
 }

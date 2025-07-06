@@ -1,0 +1,51 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+}
+.title {
+	text-transform: uppercase;
+	color: #fbfbfb;
+	font-size: 38px;
+
+	max-width: 550px;
+	font-weight: 800;
+	transform: scale(0.7, 1.1) skew(-20deg);
+	text-align: center;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	max-width: 450px;
+	width: 100%;
+}
+.form .input {
+	padding: 20px;
+	font-size: 18px;
+}
+.btn {
+	padding: 20px;
+	font-size: 18px;
+	cursor: pointer;
+	background-color: #e0353f;
+	color: #fff;
+	&:hover {
+		opacity: 0.9;
+	}
+	border: none;
+}
+.policyText{
+	    max-width: 500px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.6;
+    line-height: 1.4;
+		display: flex;
+		flex-direction: column;
+}
+.input.error, .input:focus.error{
+	border: 2px red solid;
+}

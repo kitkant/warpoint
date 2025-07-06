@@ -6,6 +6,7 @@ const cardData = [
 		subTitle: 'Так вы ещё не играли!',
 		position: 'left',
 		btn: 'Забронировать',
+		btnLink: 'RESPONSIVE'
 	},
 	{
 		title: 'Лаунж-зона',
@@ -14,6 +15,7 @@ const cardData = [
 		subTitle: 'Запоминающееся мероприятие',
 		position: 'right',
 		btn: 'Провести мероприятие',
+		btnLink: 'CALCULATE'
 	},
 ]
 
