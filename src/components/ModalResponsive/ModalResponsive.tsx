@@ -116,7 +116,7 @@ const ModalResponsive = () => {
 					<p style={{ color: 'red', fontSize: '14px' }}>{customErrors.name}</p>
 				)}
 				<input
-					placeholder='email'
+					placeholder='Email'
 					className={
 						customErrors.email
 							? styles.input + ' ' + styles.error
@@ -138,7 +138,7 @@ const ModalResponsive = () => {
 					name='phone'
 					control={control}
 					defaultValue=''
-					render={({ field}) => (
+					render={({ field }) => (
 						<>
 							<InputCountry
 								onChange={field.onChange}

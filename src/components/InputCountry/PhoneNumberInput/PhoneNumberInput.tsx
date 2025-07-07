@@ -31,7 +31,7 @@ export const PhoneNumberInput: FC<Props> = ({
 
 	return (
 		<input
-			placeholder={hasEmptyMask ? 'Phone number' : mask}
+			placeholder={hasEmptyMask ? 'Номер телефона' : mask}
 			ref={inputRef}
 			className={
         hasEmptyMask ? styles.inputEmpty :
