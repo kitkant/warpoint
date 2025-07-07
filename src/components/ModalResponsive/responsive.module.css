@@ -36,16 +36,17 @@
 	}
 	border: none;
 }
-.policyText{
-	    max-width: 500px;
-    font-size: 14px;
-    text-align: center;
-    color: #fff;
-    opacity: 0.6;
-    line-height: 1.4;
-		display: flex;
-		flex-direction: column;
+.policyText {
+	max-width: 500px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	opacity: 0.6;
+	line-height: 1.4;
+	display: flex;
+	flex-direction: column;
 }
-.input.error, .input:focus.error{
+.input.error,
+.input:focus.error {
 	border: 2px red solid;
 }

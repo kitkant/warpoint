@@ -1,27 +1,47 @@
-import { useEffect } from 'react'
+import gsap from 'gsap'
+import { useEffect, useRef } from 'react'
 import { useModal } from '../context/ModalContext'
 import ModalResponsive from './ModalResponsive/ModalResponsive'
 
 export default function Modal() {
 	const { modal, closeModal } = useModal()
+	const modalRef = useRef(null)
 
 	useEffect(() => {
 		if (modal) {
 			document.body.style.overflow = 'hidden'
+			gsap.from(modalRef.current, {
+				y: 50,
+				opacity: 0,
+				duration: 0.3,
+			})
 		} else {
 			document.body.style.overflow = ''
 		}
 	}, [modal])
 
+	const isCloseAnimation = () => {
+		gsap.to(modalRef.current, {
+			y: 0,
+			opacity: 0,
+			duration: 0.3,
+		})
+		setTimeout(() => {
+			closeModal()
+		}, 300)
+	}
+
 	if (!modal) return null
 
 	return (
 		<>
-			<div className={'overlay' + ' ' + (modal ? 'active' : '')} onClick={closeModal} />
-			<div className='modal'>
-				{modal === 'RESPONSIVE' && <ModalResponsive/>}
+			<div
+				className={'overlay' + ' ' + (modal ? 'active' : '')}
+				onClick={isCloseAnimation}
+			/>
+			<div ref={modalRef} className='modal'>
+				{modal === 'RESPONSIVE' && <ModalResponsive />}
 				{modal === 'CALCULATE' && <p>Это модалка подсчета</p>}
-				
 			</div>
 
 			<style jsx>{`
@@ -33,9 +53,8 @@ export default function Modal() {
 					backdrop-filter: blur(2px);
 					transition: all 5s ease;
 					opacity: 0;
-					
 				}
-				.overlay.active{
+				.overlay.active {
 					opacity: 1;
 				}
 				.modal {
