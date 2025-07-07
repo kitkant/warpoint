@@ -37,6 +37,7 @@ export const CountryCodeInput = ({
 				!wrapperRef.current.contains(event.target as Node)
 			) {
 				setIsOpen(false)
+				setFilter('')
 			}
 		}
 		document.addEventListener('mousedown', handleClickOutside)
@@ -77,7 +78,7 @@ export const CountryCodeInput = ({
 								type='text'
 								value={filter}
 								onChange={e => setFilter(e.target.value)}
-								placeholder='Country name'
+								placeholder='Поиск'
 								className={styles.searchInput}
 							/>
 						</div>
