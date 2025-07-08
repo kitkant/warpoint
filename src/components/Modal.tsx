@@ -1,4 +1,5 @@
 import gsap from 'gsap'
+import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useModal } from '../context/ModalContext'
 import ModalResponsive from './ModalResponsive/ModalResponsive'
@@ -42,6 +43,9 @@ export default function Modal() {
 			<div ref={modalRef} className='modal'>
 				{modal === 'RESPONSIVE' && <ModalResponsive />}
 				{modal === 'CALCULATE' && <p>Это модалка подсчета</p>}
+				<button className='imgContainer' type='button' onClick={isCloseAnimation}>
+					<Image src={'/img/exit.svg'} width={24} height={24} alt='exit' />
+				</button>
 			</div>
 
 			<style jsx>{`
@@ -54,6 +58,7 @@ export default function Modal() {
 					transition: all 5s ease;
 					opacity: 0;
 				}
+
 				.overlay.active {
 					opacity: 1;
 				}
@@ -66,6 +71,19 @@ export default function Modal() {
 					background: #262626;
 					padding: 45px;
 					max-width: 600px;
+				}
+				.imgContainer {
+					position: absolute;
+					top: 20;
+					right: 20;
+					cursor: pointer;
+					max-heigh: 24px;
+					max-width: 24px;
+					border: none;
+					background-color: transparent;
+				}
+					.imgContainer:hover {
+					opacity: 0.8
 				}
 			`}</style>
 		</>
