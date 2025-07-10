@@ -27,9 +27,10 @@ export default function Modal() {
 			opacity: 0,
 			duration: 0.3,
 		})
-		setTimeout(() => {
+		const timerId = setTimeout(() => {
 			closeModal()
 		}, 300)
+		 return () => clearTimeout(timerId);
 	}
 
 	if (!modal) return null
