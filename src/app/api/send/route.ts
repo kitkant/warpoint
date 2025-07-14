@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 // const resend = new Resend(process.env.RESEND_API_KEY)
-const resend = new Resend('re_XfEhyQ5M_M46bGFKpbEAMXcoZNuaB4KHU')
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
 	try {
@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
 		const emailToAdmin = await resend.emails.send({
 			from: 'onboarding@resend.dev',
-			to: 'srigotest@gmail.com',
+			to: `${process.env.ADMIN_EMAIL}`,
 
 			subject: 'Warpoint',
 			html: `<p>Имя: ${subject}</p>
