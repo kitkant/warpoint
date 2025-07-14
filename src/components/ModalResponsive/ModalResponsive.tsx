@@ -68,12 +68,32 @@ const ModalResponsive = () => {
 	const [showErrors, setShowErrors] = useState(false)
 	const [data, setData] = useState<CountryConfig[] | null>(null)
 
-	const onSubmit = (data: Inputs) => {
+	const [isSending, setIsSending] = useState(false)
+	const [error, setError] = useState('')
+
+	const onSubmit = async (data: Inputs) => {
 		setShowErrors(true)
 		const isValid = validateForm(data)
+		const email = data.email
+		const message = data.phone
+		const subject = data.name
 
 		if (isValid) {
-			console.log('Форма валидна, данные:', data)
+			try {
+				console.log('Форма валидна, данные:', data)
+				const response = await fetch('/api/send', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ email, subject, message }),
+				})
+
+				if (!response.ok) throw new Error('Ошибка отправки')
+				setIsSending(true)
+
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			} catch (err: any) {
+				setError(err.message || 'Что-то пошло не так')
+			}
 		}
 	}
 
@@ -98,76 +118,114 @@ const ModalResponsive = () => {
 	return (
 		<div className={styles.wrapper}>
 			<h2 className={styles.title}>Оставьте заявку и мы свяжемся с вами</h2>
-			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-				<input
-					placeholder='Имя'
-					className={
-						customErrors.name ? styles.input + ' ' + styles.error : styles.input
-					}
-					{...register('name', {})}
-					type='text'
-					onClick={() =>
-						customErrors &&
-						customErrors.name &&
-						setCustomErrors({ ...customErrors, name: '' })
-					}
-				/>
-				{showErrors && customErrors.name && (
-					<p style={{ color: 'red', fontSize: '14px' }}>{customErrors.name}</p>
-				)}
-				<input
-					placeholder='Email'
-					className={
-						customErrors.email
-							? styles.input + ' ' + styles.error
-							: styles.input
-					}
-					{...register('email', {})}
-					type='email'
-					onClick={() =>
-						customErrors &&
-						customErrors.email &&
-						setCustomErrors({ ...customErrors, email: '' })
-					}
-				/>
 
-				{showErrors && customErrors.email && (
-					<p style={{ color: 'red', fontSize: '14px' }}>{customErrors.email}</p>
-				)}
-				<Controller
-					name='phone'
-					control={control}
-					defaultValue=''
-					render={({ field }) => (
-						<>
-							<InputCountry
-								onChange={field.onChange}
-								data={data}
-								countryFlag={countryFlag}
-								setCountryFlag={setCountryFlag}
-								customErrors={customErrors}
-								setCustomErrors={setCustomErrors}
-							/>
-							{showErrors && customErrors.phone && (
-								<p style={{ color: 'red', fontSize: '14px' }}>
-									{customErrors.phone}
-								</p>
+			{error ? (
+				<>
+					<p className={styles.errorFormMessage}>Что-то пошло не так...</p>
+					
+				</>
+			) : isSending ? (
+				<>
+					<p className={styles.sendFormMessage}>
+						Скоро менеджер с Вами свяжется
+					</p>
+				
+				</>
+			) : (
+				<>
+					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+						<input
+							placeholder='Имя'
+							className={
+								customErrors.name
+									? styles.input + ' ' + styles.error
+									: styles.input
+							}
+							{...register('name', {})}
+							type='text'
+							onClick={() =>
+								customErrors &&
+								customErrors.name &&
+								setCustomErrors({ ...customErrors, name: '' })
+							}
+						/>
+						{showErrors && customErrors.name && (
+							<p style={{ color: 'red', fontSize: '14px' }}>
+								{customErrors.name}
+							</p>
+						)}
+						<input
+							placeholder='Email'
+							className={
+								customErrors.email
+									? styles.input + ' ' + styles.error
+									: styles.input
+							}
+							{...register('email', {})}
+							type='email'
+							onClick={() =>
+								customErrors &&
+								customErrors.email &&
+								setCustomErrors({ ...customErrors, email: '' })
+							}
+						/>
+
+						{showErrors && customErrors.email && (
+							<p style={{ color: 'red', fontSize: '14px' }}>
+								{customErrors.email}
+							</p>
+						)}
+						<Controller
+							name='phone'
+							control={control}
+							defaultValue=''
+							render={({ field }) => (
+								<>
+									<InputCountry
+										onChange={field.onChange}
+										data={data}
+										countryFlag={countryFlag}
+										setCountryFlag={setCountryFlag}
+										customErrors={customErrors}
+										setCustomErrors={setCustomErrors}
+									/>
+									{showErrors && customErrors.phone && (
+										<p style={{ color: 'red', fontSize: '14px' }}>
+											{customErrors.phone}
+										</p>
+									)}
+								</>
 							)}
-						</>
-					)}
-				/>
-				<input value='Оставить заявку' className={styles.btn} type='submit' />
-			</form>
+						/>
+						<input
+							value='Оставить заявку'
+							className={styles.btn}
+							type='submit'
+						/>
+					</form>
+					{/* <p className={styles.policyText}>
+						<span>
+							Нажимая кнопку &quot;Оставить заявку&quot; вы соглашаетесь на
+							обработку
+						</span>
+						<span>
+							персональных данных в соответствии с Политикой конфиденциальности,
+						</span>
+						<span>а также с условиями Пользовательского соглашения.</span>
+					</p> */}
+				</>
+				
+			)}
 			<p className={styles.policyText}>
-				<span>
-					Нажимая кнопку &quot;Оставить заявку&quot; вы соглашаетесь на
-					обработку
-				</span>
-				<span>
-					персональных данных в соответствии с Политикой конфиденциальности,
-				</span>
-				<span>а также с условиями Пользовательского соглашения.</span>
-			</p>
+						<span>
+							Нажимая кнопку &quot;Оставить заявку&quot; вы соглашаетесь на
+							обработку
+						</span>
+						<span>
+							персональных данных в соответствии с Политикой конфиденциальности,
+						</span>
+						<span>а также с условиями Пользовательского соглашения.</span>
+					</p>
 		</div>
 	)
 }

@@ -24,6 +24,7 @@
     "react-input-mask": "^2.0.4",
     "react-phone-number-input": "^3.4.12",
     "react-responsive": "^10.0.0",
+    "resend": "^4.6.0",
     "warpoint": "file:"
   },
   "devDependencies": {

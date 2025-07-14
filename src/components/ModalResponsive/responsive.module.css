@@ -50,3 +50,11 @@
 .input:focus.error {
 	border: 2px red solid;
 }
+.errorFormMessage{
+	font-size: 36px;
+	color: #fbfbfb;
+}
+.sendFormMessage{
+	font-size: 36px;
+	color: #fbfbfb;
+}
