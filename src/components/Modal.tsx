@@ -75,8 +75,8 @@ export default function Modal() {
 				}
 				.imgContainer {
 					position: absolute;
-					top: 20;
-					right: 20;
+					top: 20px;
+					right: 20px;
 					cursor: pointer;
 					max-heigh: 24px;
 					max-width: 24px;
