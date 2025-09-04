@@ -15,7 +15,8 @@ const cardData = [
 		subTitle: 'Запоминающееся мероприятие',
 		position: 'right',
 		btn: 'Провести мероприятие',
-		btnLink: 'CALCULATE'
+		btnLink: 'RESPONSIVE'
+		// btnLink: 'CALCULATE'
 	},
 ]
 

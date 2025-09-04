@@ -95,7 +95,7 @@ const CardZones = ({ title, subTitle, text, img, position, btn, btnLink }: IProp
 				primary={true}
 				width={position === 'left' ? 175 : 256}
 				height={75}
-				onClick={() => console.log('click')}
+				onClick={() => openModal(btnLink as ModalType)}
 				header={false}
 			/>
 		</div>
