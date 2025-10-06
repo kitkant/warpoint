@@ -86,6 +86,30 @@ export default function Modal() {
 					.imgContainer:hover {
 					opacity: 0.8
 				}
+				@media (max-width: 1020px){
+
+					.modal{
+					width: 400px;
+					padding: 50px;
+					
+					}
+				}
+				@media (max-width: 960px){
+
+					.modal{
+					width: 400px;
+					
+					}
+				}
+					@media (max-width: 640px){
+
+					.modal{
+					width: 100%;
+					padding: 50px 0;
+					max-width: none;
+					}
+				}
+					
 			`}</style>
 		</>
 	)

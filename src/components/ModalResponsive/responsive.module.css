@@ -50,11 +50,48 @@
 .input:focus.error {
 	border: 2px red solid;
 }
-.errorFormMessage{
+.errorFormMessage {
 	font-size: 36px;
 	color: #fbfbfb;
 }
-.sendFormMessage{
+.sendFormMessage {
 	font-size: 36px;
 	color: #fbfbfb;
+}
+.errorInput {
+	color: red;
+	font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+	.title {
+		font-size: 36px;
+	}
+	.form .input {
+		font-size: 16px;
+	}
+	.policyText {
+		font-size: 12px;
+	}
+}
+@media (max-width: 1020px) {
+	.title {
+		font-size: 32px;
+	}
+
+}
+@media (max-width: 600px) {
+	.form{
+		max-width: 80%;
+	}
+ .policyText{
+		max-width: 80%;
+	}
+}
+@media (max-width: 450px) {
+ 
+.title {
+		font-size: 28px;
+	}
+	
 }

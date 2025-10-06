@@ -148,7 +148,7 @@ const ModalResponsive = () => {
 							}
 						/>
 						{showErrors && customErrors.name && (
-							<p style={{ color: 'red', fontSize: '14px' }}>
+							<p className={styles.errorInput}>
 								{customErrors.name}
 							</p>
 						)}
@@ -169,7 +169,7 @@ const ModalResponsive = () => {
 						/>
 
 						{showErrors && customErrors.email && (
-							<p style={{ color: 'red', fontSize: '14px' }}>
+							<p className={styles.errorInput}>
 								{customErrors.email}
 							</p>
 						)}
@@ -188,7 +188,7 @@ const ModalResponsive = () => {
 										setCustomErrors={setCustomErrors}
 									/>
 									{showErrors && customErrors.phone && (
-										<p style={{ color: 'red', fontSize: '14px' }}>
+										<p className={styles.errorInput}>
 											{customErrors.phone}
 										</p>
 									)}
