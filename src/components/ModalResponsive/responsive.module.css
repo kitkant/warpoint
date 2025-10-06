@@ -55,14 +55,18 @@
 	color: #fbfbfb;
 }
 .sendFormMessage {
-	font-size: 36px;
+	font-size: 32px;
 	color: #fbfbfb;
 }
 .errorInput {
 	color: red;
 	font-size: 14px;
 }
-
+@media(max-width: 1440px){
+	.sendFormMessage{
+		font-size: 26px;
+	}
+}
 @media (max-width: 1200px) {
 	.title {
 		font-size: 36px;
@@ -73,12 +77,15 @@
 	.policyText {
 		font-size: 12px;
 	}
+	
 }
 @media (max-width: 1020px) {
 	.title {
 		font-size: 32px;
 	}
-
+.sendFormMessage{
+		font-size: 24px;
+	}
 }
 @media (max-width: 600px) {
 	.form{
@@ -93,5 +100,7 @@
 .title {
 		font-size: 28px;
 	}
-	
+	.sendFormMessage{
+		font-size: 20px;
+	}
 }
