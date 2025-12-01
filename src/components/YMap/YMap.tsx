@@ -24,7 +24,7 @@ export default function YMapComponent() {
 
 			// Создаем script тег
 			const script = document.createElement('script')
-			script.src = `https://api-maps.yandex.ru/v3/?apikey=${process.env.YANDEX_MAPS_API_KEY}&lang=ru_RU`
+			script.src = `https://api-maps.yandex.ru/v3/?apikey=df961c11-bc27-4941-86c4-0566734e05a5&lang=ru_RU`
 			script.async = true
 
 			script.onload = async () => {
