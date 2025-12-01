@@ -5,12 +5,14 @@ import { useEffect, useRef } from 'react';
 // Типы для ymaps3
 declare global {
   interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ymaps3: any;
   }
 }
 
 export default function YMapComponent() {
   const mapRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mapInstance = useRef<any>(null);
 
   useEffect(() => {
