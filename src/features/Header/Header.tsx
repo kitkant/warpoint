@@ -303,7 +303,7 @@ const Header = () => {
 							</li>
 							<li className={styles.nav_container__navigationItem}>
 								<Link
-									href='/'
+									href='/contacts'
 									className={styles.nav_container__navigationItem__link}
 								>
 									Контакты
