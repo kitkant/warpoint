@@ -1,8 +1,8 @@
 import useMediaQuery from '@/app/hooks/useMediaQuery'
 import Button from '@/app/UI/Button/Button'
+import { ModalType, useModal } from '@/context/ModalContext'
 import Image from 'next/image'
 import styles from './cardZones.module.css'
-import { ModalType, useModal } from '@/context/ModalContext'
 
 interface IProps {
 	title: string
@@ -14,10 +14,18 @@ interface IProps {
 	btnLink: string
 }
 
-const CardZones = ({ title, subTitle, text, img, position, btn, btnLink }: IProps) => {
+const CardZones = ({
+	title,
+	subTitle,
+	text,
+	img,
+	position,
+	btn,
+	btnLink,
+}: IProps) => {
 	const laptop1200 = useMediaQuery(1202)
 	const laptop640 = useMediaQuery(641)
-	const {openModal} = useModal()
+	const { openModal } = useModal()
 
 	return (
 		<div className={styles.container}>
@@ -39,6 +47,9 @@ const CardZones = ({ title, subTitle, text, img, position, btn, btnLink }: IProp
 							alt='play'
 							width={laptop640 ? 66 : 80}
 							height={laptop640 ? 66 : 80}
+							onClick={() => {
+								openModal(position === 'left' ? 'VIDEOGAME' : 'VIDEOLAUNGE')
+							}}
 							src={'/img/pages/main/EntertainingZones/play-button.svg'}
 						/>
 					</button>

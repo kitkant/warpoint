@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useModal } from '../context/ModalContext'
 import ModalResponsive from './ModalResponsive/ModalResponsive'
+import ModalVideoGame from './ModalVideoGame/ModalVideoGame'
+import ModalVideoLounge from './ModalVideoLounge/ModalVideoLounge'
+import ModalVideoTrailerGame from './ModalVideoTrailerGame/ModalVideoTrailerGame'
 
 export default function Modal() {
 	const { modal, closeModal } = useModal()
@@ -30,7 +33,7 @@ export default function Modal() {
 		const timerId = setTimeout(() => {
 			closeModal()
 		}, 300)
-		 return () => clearTimeout(timerId);
+		return () => clearTimeout(timerId)
 	}
 
 	if (!modal) return null
@@ -44,10 +47,23 @@ export default function Modal() {
 			<div ref={modalRef} className='modal'>
 				{modal === 'RESPONSIVE' && <ModalResponsive />}
 				{modal === 'CALCULATE' && <p>Это модалка подсчета</p>}
-				<button className='imgContainer' type='button' onClick={isCloseAnimation}>
+				{modal === 'VIDEOGAME' && <ModalVideoGame />}
+				{modal === 'VIDEOLAUNGE' && <ModalVideoLounge/>}
+				{modal === 'VIDEOTRAILERGAME' && <ModalVideoTrailerGame/>}
+
+			{modal === 'RESPONSIVE' && (
+			<button
+					className='imgContainer'
+					type='button'
+					onClick={isCloseAnimation}
+				>
 					<Image src={'/img/exit.svg'} width={24} height={24} alt='exit' />
 				</button>
+			
+			)
+			}
 			</div>
+				
 
 			<style jsx>{`
 				.overlay {
@@ -58,6 +74,7 @@ export default function Modal() {
 					backdrop-filter: blur(2px);
 					transition: all 5s ease;
 					opacity: 0;
+					cursor:pointer;
 				}
 
 				.overlay.active {
@@ -70,8 +87,6 @@ export default function Modal() {
 					transform: translate(-50%, -50%);
 					z-index: 1001;
 					background: #262626;
-					padding: 45px;
-					max-width: 600px;
 				}
 				.imgContainer {
 					position: absolute;
@@ -83,33 +98,23 @@ export default function Modal() {
 					border: none;
 					background-color: transparent;
 				}
-					.imgContainer:hover {
-					opacity: 0.8
+				.imgContainer:hover {
+					opacity: 0.8;
 				}
-				@media (max-width: 1020px){
+				@media(max-width:1020px){
+				.modal {
+						width: 490px;
 
-					.modal{
-					width: 400px;
-					padding: 50px;
-					
 					}
 				}
-				@media (max-width: 960px){
-
-					.modal{
-					width: 400px;
-					
+				@media (max-width: 640px) {
+	
+					.modal {
+						width: 100%;
+						padding: 50px 0;
+						max-width: none;
 					}
 				}
-					@media (max-width: 640px){
-
-					.modal{
-					width: 100%;
-					padding: 50px 0;
-					max-width: none;
-					}
-				}
-					
 			`}</style>
 		</>
 	)

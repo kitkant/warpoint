@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-export type ModalType = "RESPONSIVE" | "CALCULATE" | null;
+export type ModalType = "RESPONSIVE" | "CALCULATE" | "VIDEOGAME" | "VIDEOLAUNGE" | "VIDEOTRAILERGAME" | null;
 
 const ModalContext = createContext<{
   modal: ModalType;

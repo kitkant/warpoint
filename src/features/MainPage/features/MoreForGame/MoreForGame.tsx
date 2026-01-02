@@ -4,8 +4,11 @@ import { Fragment } from 'react'
 import styles from '../../styles/moreForGame.module.css'
 import Item from './components/Item/Item'
 import itemData from './data/itemData'
+import { useModal } from '@/context/ModalContext'
 
 const MoreForGame = () => {
+		const { openModal } = useModal()
+	
 	const laptop1200 = useMediaQuery(1202)
 	const tablet960 = useMediaQuery(961)
 	const mobile640 = useMediaQuery(641)
@@ -61,6 +64,9 @@ const MoreForGame = () => {
 									alt='play'
 									width={laptop640 ? 60 : 80}
 									height={laptop640 ? 60 : 80}
+									onClick={() => {
+									openModal( 'VIDEOTRAILERGAME')
+							}}
 									src={'/img/pages/main/EntertainingZones/play-button.svg'}
 								/>
 							</button>
