@@ -5,7 +5,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
 
 	const { modal } = useModal()
 	return (
-		<div inert={!!modal}>
+		<div className='LayoutWrapper' inert={!!modal}>
 			{children}
 		</div>
 	);

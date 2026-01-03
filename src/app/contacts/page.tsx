@@ -1,5 +1,4 @@
 'use client'
-import YMapComponent from '@/components/YMap/YMap'
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +12,10 @@ const Contact = () => {
 			<LeftContent>
 				<Title>узнайте больше</Title>
 				<BoxMap>
-					 <YMapComponent />
+					 {/* <YMapComponent />
+					  */}
+						<iframe className='map' src="https://yandex.ru/map-widget/v1/?um=constructor%3A536a3bee8f8838252663edf852be908dc1c150fdbee9cea2e7536f84fbac4ef6&amp;source=constructor" width="550" height="440" frameBorder="0"></iframe>
+						
 				</BoxMap>
 			</LeftContent>
 			<RightContent>
@@ -88,11 +90,27 @@ const Wrapper = styled.section`
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	@media(max-width: 1200px){
+		max-width: 940px;
+	}
+	@media(max-width: 960px){
+		max-width: 620px;
+		flex-direction: column;
+	}
+	@media(max-width: 640px){
+		max-width:460px;
+
+	}
+	@media(max-width: 480px){
+		max-width:90vw;
+	}
 `
 const LeftContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 120px;
+	@media(max-width: 960px){
+	gap: 80px;}
 `
 const RightContent = styled.div`
 	display: flex;
@@ -103,6 +121,27 @@ const BoxMap = styled.div`
 	width: 550px;
 	height: 440px;
 	background-color: #000;
+	position: relative;
+	& .map{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	@media(max-width: 1200px){
+		width: 450px;
+		height: 400px;
+	}
+	@media(max-width: 960px){
+		width: 100%;
+	}
+	@media(max-width: 640px){
+		height: 300px;
+	}
+	@media(max-width: 480px){
+		height: 500px;
+	}
 `
 const Title = styled.h1`
 	background-color: #e23239;
@@ -113,6 +152,24 @@ const Title = styled.h1`
 	font-weight: 800;
 	transform: scale(0.7, 1.1) skew(-20deg);
 	margin-left: -95px;
+	@media(max-width: 1200px){
+		font-size: 62px;
+		padding: 5px 20px 5px 20px;
+		width: fit-content;
+	}
+	@media(max-width: 960px){
+		font-size:48px;
+		margin-left: -80px;
+	}
+	@media(max-width: 640px){
+		font-size: 32px;
+		    margin-left: -60px;
+	}
+	@media(max-width: 480px){
+		font-size: 36px;
+		margin-left: -65px;
+	}
+	@media(max-width: 380px)
 `
 const ImgContainer = styled.div`
 	margin-top: -20px;
@@ -123,6 +180,19 @@ const ImgContainer = styled.div`
 		top: -15px;
 		right: -80px;
 		z-index: -1;
+	}
+	@media(max-width: 1200px){
+		img:first-of-type{
+			width: 400px;
+			height: 250px;
+		}
+		img:last-of-type{
+			width: 400px;
+			height: 250px;
+		}
+	}
+	@media(max-width: 960px){
+		display: none;
 	}
 `
 const ContactContainer = styled.div`
@@ -139,6 +209,19 @@ const LinkWrapper = styled.div`
 		font-weight: 400;
 		margin-top: 15px;
 	}
+	@media(max-width: 960px){
+		margin-top: 30px;
+	}
+	@media(max-width: 640px){
+		& span{
+			font-size: 18px;
+		}
+	}
+	@media(max-width: 480px){
+		& span{
+			font-size: 20px;
+		}
+	}
 `
 const LinkContainer = styled.div`
 	display: flex;
@@ -149,10 +232,22 @@ const LinkContainer = styled.div`
 		font-weight: 700;
 		font-size: 40px;
 		transition: all 0.3s ease;
+		width: fit-content;
 		&:hover {
 			color: #e0353f;
 		}
 	}
+	@media(max-width: 1200px){
+		& a{
+			font-size: 36px;
+		}
+	}
+		@media(max-width: 640px){
+		& a{
+			font-size: 28px;
+		}
+	}
+	
 `
 const LinkSocialWrapper = styled.div`
 	display: flex;
@@ -168,6 +263,16 @@ const LinkSocialContainerTime = styled.div`
 		color: rgb(232, 233, 235);
 		font-size: 20px;
 		font-weight: 400;
+	}
+	@media(max-width: 640px){
+		& span{
+			font-size: 18px;
+		}
+	}
+		@media(max-width: 480px){
+		& span{
+			font-size: 20px;
+		}
 	}
 `
 const LinkSocialContainerBtn = styled.div`
