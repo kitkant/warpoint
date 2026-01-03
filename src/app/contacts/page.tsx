@@ -9,6 +9,8 @@ const Contact = () => {
 
 	return (
 		<Wrapper>
+			<Container>
+
 			<LeftContent>
 				<Title>узнайте больше</Title>
 				<BoxMap>
@@ -81,11 +83,18 @@ const Contact = () => {
 					</LinkSocialWrapper>
 				</ContactContainer>
 			</RightContent>
+			</Container>
+
 		</Wrapper>
 	)
 }
 
 const Wrapper = styled.section`
+	max-width: 100vw;
+	overflow: hidden;
+	padding-top: 35px;
+`
+const Container = styled.div`
 	max-width: 1160px;
 	margin: 0 auto;
 	display: flex;
