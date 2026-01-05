@@ -1,6 +1,7 @@
 'use client'
 import EntertainingZones from './features/EntertainingZones/EntertainingZones'
 import EventCarousel from './features/EventCarousel/EventCarousel'
+import FaqZone from './features/FaqZone/FaqZone'
 import Hero from './features/Hero/Hero'
 import HeroGrid from './features/HeroGrid/HeroGrid'
 import MoreForGame from './features/MoreForGame/MoreForGame'
@@ -16,6 +17,7 @@ const MainPage = () => {
 			<EntertainingZones />
 			<MoreForGame />
 			<SelectTariff />
+			<FaqZone/>
 			<EventCarousel />
 		</main>
 	)
